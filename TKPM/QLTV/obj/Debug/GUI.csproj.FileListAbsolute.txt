@@ -1,0 +1,14 @@
+E:\TKPM-Project\TKPM\QLTV\bin\Debug\QLTV.exe.config
+E:\TKPM-Project\TKPM\QLTV\bin\Debug\QLTV.exe
+E:\TKPM-Project\TKPM\QLTV\bin\Debug\QLTV.pdb
+E:\TKPM-Project\TKPM\QLTV\bin\Debug\System.Data.SqlClient.dll
+E:\TKPM-Project\TKPM\QLTV\bin\Debug\System.Data.SqlClient.xml
+E:\TKPM-Project\TKPM\QLTV\obj\Debug\GUI.csproj.AssemblyReference.cache
+E:\TKPM-Project\TKPM\QLTV\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+E:\TKPM-Project\TKPM\QLTV\obj\Debug\QLTV.Form1.resources
+E:\TKPM-Project\TKPM\QLTV\obj\Debug\QLTV.Properties.Resources.resources
+E:\TKPM-Project\TKPM\QLTV\obj\Debug\GUI.csproj.GenerateResource.cache
+E:\TKPM-Project\TKPM\QLTV\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+E:\TKPM-Project\TKPM\QLTV\obj\Debug\GUI.csproj.CopyComplete
+E:\TKPM-Project\TKPM\QLTV\obj\Debug\QLTV.exe
+E:\TKPM-Project\TKPM\QLTV\obj\Debug\QLTV.pdb
