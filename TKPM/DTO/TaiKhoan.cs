@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    internal class TaiKhoan
+    public class TaiKhoan
     {
+        public string MaTK { get; set; }
+        public string LoaiTK { get; set; }
+        public string MaNV { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

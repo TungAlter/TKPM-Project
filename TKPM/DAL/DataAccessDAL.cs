@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 namespace DAL
 {
-    internal class DataAccessDAL
+    public class DataAccessDAL
     {
         public SqlConnection connect = null;
-        string strconnect = @"server =DESKTOP-UL4FHN4\SQLEXPRESS ; Database = KhachSan ; Trusted_Connection=True ; TrustServerCertificate=True";
+        string strconnect = @"server =DESKTOP-UL4FHN4\SQLEXPRESS ; Database = QLKS_TKPM1 ; Trusted_Connection=True ; TrustServerCertificate=True";
         public void Connection()
         {
             if (connect == null)
