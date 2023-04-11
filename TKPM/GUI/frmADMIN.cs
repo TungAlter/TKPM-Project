@@ -43,5 +43,10 @@ namespace GUI
         {
             OpenChildForm(new frmQLTaiKhoan());
         }
+
+        private void frmADMIN_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

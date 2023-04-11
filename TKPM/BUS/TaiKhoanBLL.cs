@@ -43,5 +43,19 @@ namespace BUS
             }
             return 0;
         }
+
+        public int ThemTaiKhoanBLL(TaiKhoan tk)
+        {
+            string res = taikhoan.ThemTaiKhoanDAL(tk);
+            if (res == "yes")
+            {
+                return 1;
+            }
+            else if (res == "no")
+            {
+                return 0;
+            }
+            return 0;
+        }
     }
 }

@@ -58,5 +58,29 @@ namespace GUI
                 }
             } 
         }
+
+        private void btn_ThemTK_Click(object sender, EventArgs e)
+        {
+            TaiKhoanBLL tkbll = new TaiKhoanBLL();
+            TaiKhoan tk = new TaiKhoan();
+            tk.MaTK = txt_matk.Text.ToString();
+            tk.LoaiTK = cbx_loaitk.SelectedItem.ToString();
+            tk.MaNV = txt_manv.Text.ToString();
+            tk.Username = txt_usrname.Text.ToString();
+            tk.Password = txt_pwd.Text.ToString();
+            int res = tkbll.ThemTaiKhoanBLL(tk);
+            if (res == 1)
+            {
+                MessageBox.Show("Thêm Thành Công !!");
+                txt_manv.Clear();
+                txt_matk.Clear();
+                txt_pwd.Clear();
+                txt_usrname.Clear();
+            }
+            else if (res == 0)
+            {
+                MessageBox.Show("Đéo ổn !!");
+            }
+        }
     }
 }

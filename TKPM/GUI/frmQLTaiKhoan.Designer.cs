@@ -131,6 +131,7 @@
             // 
             // grpbox_ThemTK
             // 
+            this.grpbox_ThemTK.Controls.Add(this.btn_ThemTK);
             this.grpbox_ThemTK.Controls.Add(this.txt_pwd);
             this.grpbox_ThemTK.Controls.Add(this.label5);
             this.grpbox_ThemTK.Controls.Add(this.txt_usrname);
@@ -184,20 +185,19 @@
             this.cbx_loaitk.Items.AddRange(new object[] {
             "LT",
             "AD"});
-            this.cbx_loaitk.Location = new System.Drawing.Point(225, 16);
+            this.cbx_loaitk.Location = new System.Drawing.Point(225, 53);
             this.cbx_loaitk.Name = "cbx_loaitk";
-            this.cbx_loaitk.Size = new System.Drawing.Size(110, 23);
+            this.cbx_loaitk.Size = new System.Drawing.Size(90, 23);
             this.cbx_loaitk.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 99);
+            this.label4.Location = new System.Drawing.Point(21, 99);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "Username";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -211,7 +211,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(174, 19);
+            this.label2.Location = new System.Drawing.Point(174, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 15);
             this.label2.TabIndex = 5;
@@ -221,19 +221,19 @@
             // 
             this.btn_ThemTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn_ThemTK.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_ThemTK.Location = new System.Drawing.Point(587, 205);
+            this.btn_ThemTK.Location = new System.Drawing.Point(174, 12);
             this.btn_ThemTK.Name = "btn_ThemTK";
-            this.btn_ThemTK.Size = new System.Drawing.Size(75, 23);
+            this.btn_ThemTK.Size = new System.Drawing.Size(141, 29);
             this.btn_ThemTK.TabIndex = 13;
             this.btn_ThemTK.Text = "Thêm Tài Khoản";
             this.btn_ThemTK.UseVisualStyleBackColor = false;
+            this.btn_ThemTK.Click += new System.EventHandler(this.btn_ThemTK_Click);
             // 
             // frmQLTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 352);
-            this.Controls.Add(this.btn_ThemTK);
             this.Controls.Add(this.grpbox_ThemTK);
             this.Controls.Add(this.btn_XoaTK);
             this.Controls.Add(this.btn_dsTK);

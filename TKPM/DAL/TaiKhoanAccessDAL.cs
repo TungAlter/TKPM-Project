@@ -81,5 +81,25 @@ namespace DAL
                 return "yes";
             }
         }
+
+        public string ThemTaiKhoanDAL(TaiKhoan tk)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "INSERT INTO ACCOUNT VALUES (N'"+tk.MaTK+"', N'"+tk.LoaiTK+"',N'"+tk.MaNV+"',N'"+tk.Username+"',N'"+tk.Password+"')";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return "no";
+            }
+            else
+            {
+                reader.Close();
+                return "yes";
+            }
+        }
     }
 }

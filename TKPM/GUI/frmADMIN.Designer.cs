@@ -54,11 +54,11 @@
             // btn_Logut
             // 
             this.btn_Logut.BackColor = System.Drawing.Color.Red;
+            this.btn_Logut.BackgroundImage = global::GUI.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout_24;
             this.btn_Logut.Location = new System.Drawing.Point(670, 0);
             this.btn_Logut.Name = "btn_Logut";
-            this.btn_Logut.Size = new System.Drawing.Size(79, 29);
+            this.btn_Logut.Size = new System.Drawing.Size(39, 29);
             this.btn_Logut.TabIndex = 1;
-            this.btn_Logut.Text = "Đăng Xuất";
             this.btn_Logut.UseVisualStyleBackColor = false;
             this.btn_Logut.Click += new System.EventHandler(this.btn_Logut_Click);
             // 
@@ -94,7 +94,7 @@
             this.Header_panel.Controls.Add(this.btn_QLNV);
             this.Header_panel.Location = new System.Drawing.Point(1, 0);
             this.Header_panel.Name = "Header_panel";
-            this.Header_panel.Size = new System.Drawing.Size(749, 29);
+            this.Header_panel.Size = new System.Drawing.Size(712, 31);
             this.Header_panel.TabIndex = 4;
             // 
             // btn_ThongKe
@@ -146,18 +146,19 @@
             // 
             this.Body_panel.Location = new System.Drawing.Point(1, 29);
             this.Body_panel.Name = "Body_panel";
-            this.Body_panel.Size = new System.Drawing.Size(749, 282);
+            this.Body_panel.Size = new System.Drawing.Size(712, 313);
             this.Body_panel.TabIndex = 5;
             // 
             // frmADMIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 312);
+            this.ClientSize = new System.Drawing.Size(713, 343);
             this.Controls.Add(this.Body_panel);
             this.Controls.Add(this.Header_panel);
             this.Name = "frmADMIN";
             this.Text = "ADMIN";
+            this.Load += new System.EventHandler(this.frmADMIN_Load);
             this.Header_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
