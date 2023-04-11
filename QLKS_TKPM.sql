@@ -146,3 +146,16 @@ ALTER TABLE DangKyTour ADD CONSTRAINT fk_dangkytour_tourdulich FOREIGN KEY (MaTo
 
 ALTER TABLE HOADON ADD CONSTRAINT fk_hoadon_nhanvien FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV)
 ALTER TABLE HOADON ADD CONSTRAINT fk_hoadon_thuephong FOREIGN KEY (PhieuThuePhong) REFERENCES PHIEUTHUEPHONG(MaPhieuThue)
+
+INSERT INTO ACCOUNT ( MaTK,LoaiTK,MaNV,Usrname,Pwd) VALUES (N'TK01', N'AD',N'NV01',N'admin',N'admin')
+INSERT INTO ACCOUNT ( MaTK,LoaiTK,MaNV,Usrname,Pwd) VALUES (N'TK02', N'LT',N'NV02',N'duy',N'123')
+
+create procedure sp_Login
+(
+ @userid nvarchar(20),
+ @pwd nvarchar(20)
+)
+as 
+begin
+	select * from ACCOUNT where Usrname=@userid and Pwd=@pwd
+end
