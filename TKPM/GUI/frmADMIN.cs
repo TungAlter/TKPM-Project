@@ -23,5 +23,10 @@ namespace GUI
             Form1 login = new Form1();
             login.ShowDialog();
         }
+
+        private void btn_QLNV_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

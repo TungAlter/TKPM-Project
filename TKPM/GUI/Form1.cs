@@ -25,9 +25,11 @@ namespace GUI
                 {
                     MessageBox.Show("Chào ADMIN !!!");
                     this.Hide();
+                    
                     frmADMIN admin = new frmADMIN();
                     admin.ShowDialog();
-                    
+                    this.Close();
+
                 }
                 else if (result == 1)
                 {
@@ -38,6 +40,11 @@ namespace GUI
                     MessageBox.Show("Tài khoản hoặc Mật khẩu không chính xác !!!");
                 }
             }
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

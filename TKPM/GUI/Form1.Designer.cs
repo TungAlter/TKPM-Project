@@ -33,6 +33,7 @@
             this.matkhau = new System.Windows.Forms.Label();
             this.txt_taikhoan = new System.Windows.Forms.TextBox();
             this.txt_matkhau = new System.Windows.Forms.TextBox();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_DangNhap
@@ -77,11 +78,23 @@
             this.txt_matkhau.Size = new System.Drawing.Size(166, 23);
             this.txt_matkhau.TabIndex = 4;
             // 
+            // btn_Exit
+            // 
+            this.btn_Exit.BackColor = System.Drawing.Color.Red;
+            this.btn_Exit.Location = new System.Drawing.Point(189, 151);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(75, 40);
+            this.btn_Exit.TabIndex = 5;
+            this.btn_Exit.Text = "Thoát";
+            this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 222);
+            this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.txt_matkhau);
             this.Controls.Add(this.txt_taikhoan);
             this.Controls.Add(this.matkhau);
@@ -101,5 +114,6 @@
         private Label matkhau;
         private TextBox txt_taikhoan;
         private TextBox txt_matkhau;
+        private Button btn_Exit;
     }
 }
