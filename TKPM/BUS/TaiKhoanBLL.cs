@@ -30,5 +30,18 @@ namespace BUS
             }
             return -1;
         }
+
+        public int XoaTaiKhoanBLL(string key)
+        {
+            string res = taikhoan.XoaTaiKhoanDAL(key);
+            if (res =="yes")
+            {
+                return 1;
+            } else if (res == "no")
+            {
+                return 0;
+            }
+            return 0;
+        }
     }
 }

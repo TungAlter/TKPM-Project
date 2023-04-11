@@ -32,13 +32,14 @@
             this.btn_Logut = new System.Windows.Forms.Button();
             this.btn_QLNV = new System.Windows.Forms.Button();
             this.btn_QLPhong = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Header_panel = new System.Windows.Forms.Panel();
             this.btn_ThongKe = new System.Windows.Forms.Button();
             this.btn_HoaDon = new System.Windows.Forms.Button();
             this.btn_QLLoaiPhong = new System.Windows.Forms.Button();
             this.btn_QLSP = new System.Windows.Forms.Button();
             this.btn_QLKH = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.Body_panel = new System.Windows.Forms.Panel();
+            this.Header_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_QLTK
@@ -80,21 +81,21 @@
             this.btn_QLPhong.Text = "QL Phòng";
             this.btn_QLPhong.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // Header_panel
             // 
-            this.panel1.Controls.Add(this.btn_ThongKe);
-            this.panel1.Controls.Add(this.btn_Logut);
-            this.panel1.Controls.Add(this.btn_HoaDon);
-            this.panel1.Controls.Add(this.btn_QLLoaiPhong);
-            this.panel1.Controls.Add(this.btn_QLSP);
-            this.panel1.Controls.Add(this.btn_QLKH);
-            this.panel1.Controls.Add(this.btn_QLTK);
-            this.panel1.Controls.Add(this.btn_QLPhong);
-            this.panel1.Controls.Add(this.btn_QLNV);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(749, 29);
-            this.panel1.TabIndex = 4;
+            this.Header_panel.Controls.Add(this.btn_ThongKe);
+            this.Header_panel.Controls.Add(this.btn_Logut);
+            this.Header_panel.Controls.Add(this.btn_HoaDon);
+            this.Header_panel.Controls.Add(this.btn_QLLoaiPhong);
+            this.Header_panel.Controls.Add(this.btn_QLSP);
+            this.Header_panel.Controls.Add(this.btn_QLKH);
+            this.Header_panel.Controls.Add(this.btn_QLTK);
+            this.Header_panel.Controls.Add(this.btn_QLPhong);
+            this.Header_panel.Controls.Add(this.btn_QLNV);
+            this.Header_panel.Location = new System.Drawing.Point(1, 0);
+            this.Header_panel.Name = "Header_panel";
+            this.Header_panel.Size = new System.Drawing.Size(749, 29);
+            this.Header_panel.TabIndex = 4;
             // 
             // btn_ThongKe
             // 
@@ -141,15 +142,23 @@
             this.btn_QLKH.Text = "QL Khách Hàng";
             this.btn_QLKH.UseVisualStyleBackColor = true;
             // 
+            // Body_panel
+            // 
+            this.Body_panel.Location = new System.Drawing.Point(1, 29);
+            this.Body_panel.Name = "Body_panel";
+            this.Body_panel.Size = new System.Drawing.Size(749, 282);
+            this.Body_panel.TabIndex = 5;
+            // 
             // frmADMIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 312);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Body_panel);
+            this.Controls.Add(this.Header_panel);
             this.Name = "frmADMIN";
             this.Text = "ADMIN";
-            this.panel1.ResumeLayout(false);
+            this.Header_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -160,11 +169,12 @@
         private Button btn_Logut;
         private Button btn_QLNV;
         private Button btn_QLPhong;
-        private Panel panel1;
+        private Panel Header_panel;
         private Button btn_ThongKe;
         private Button btn_HoaDon;
         private Button btn_QLLoaiPhong;
         private Button btn_QLSP;
         private Button btn_QLKH;
+        private Panel Body_panel;
     }
 }

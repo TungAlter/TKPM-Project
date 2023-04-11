@@ -29,7 +29,7 @@ namespace DAL
                 string usrname = reader.GetString(3);
                 string pass = reader.GetString(4);
                 TaiKhoan acc = new TaiKhoan();
-                acc.MaTK = manv;
+                acc.MaTK = matk;
                 acc.LoaiTK = loaitk;
                 acc.MaNV = manv;
                 acc.Username = usrname;
@@ -59,6 +59,26 @@ namespace DAL
             {
                 dr.Close();
                 return "none";
+            }
+        }
+
+        public string XoaTaiKhoanDAL(string key)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "DELETE FROM ACCOUNT where MaTK=N'" +key+"'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return "no";
+            }
+            else
+            {
+                reader.Close();
+                return "yes";
             }
         }
     }

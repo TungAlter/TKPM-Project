@@ -16,7 +16,22 @@ namespace GUI
         {
             InitializeComponent();
         }
-
+        private Form currentFormChild;
+        private void OpenChildForm(Form ChildForm)
+        {
+            if(currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+            currentFormChild = ChildForm;
+            ChildForm.TopLevel = false;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.Dock = DockStyle.Fill;
+            Body_panel.Controls.Add(ChildForm);
+            Body_panel.Tag = ChildForm;
+            ChildForm.BringToFront();
+            ChildForm.Show();
+        }
         private void btn_Logut_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -26,7 +41,7 @@ namespace GUI
 
         private void btn_QLNV_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new frmQLTaiKhoan());
         }
     }
 }
