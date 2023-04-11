@@ -24,6 +24,10 @@ namespace GUI
                 if (result == 0)
                 {
                     MessageBox.Show("Chào ADMIN !!!");
+                    this.Hide();
+                    frmADMIN admin = new frmADMIN();
+                    admin.ShowDialog();
+                    
                 }
                 else if (result == 1)
                 {
