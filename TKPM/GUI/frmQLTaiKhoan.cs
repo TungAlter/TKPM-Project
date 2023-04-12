@@ -47,7 +47,7 @@ namespace GUI
         private void btn_XoaTK_Click(object sender, EventArgs e)
         {
             TaiKhoanBLL tkbll = new TaiKhoanBLL();
-            if (lvTaiKhoan.SelectedItems.Count > 0)
+            if (lvTaiKhoan.SelectedItems.Count == 1)
             {
                 //.Items.Clear();
                 ListViewItem lvi = lvTaiKhoan.SelectedItems[0];
@@ -62,6 +62,10 @@ namespace GUI
                     MessageBox.Show("Đéo ổn !!");
                 }
             } 
+            else
+            {
+                MessageBox.Show("Chọn 1 đối tượng để xóa !!");
+            }
         }
 
         private void btn_ThemTK_Click(object sender, EventArgs e)
@@ -90,28 +94,36 @@ namespace GUI
 
         private void btn_UpdateTK_Click(object sender, EventArgs e)
         {
-            ListViewItem lvi = lvTaiKhoan.SelectedItems[0];
-            MaTK = lvi.SubItems[0].Text.ToString();
-            LoaiTK = lvi.SubItems[1].Text.ToString();
-            MaNV = lvi.SubItems[2].Text.ToString();
-            Username = lvi.SubItems[3].Text.ToString();
-            Password = lvi.SubItems[4].Text.ToString();
-            frmUpdateTaiKhoan frUpdate = new frmUpdateTaiKhoan();
-            frUpdate.ShowDialog();
+            if (lvTaiKhoan.SelectedItems.Count != 1)
+            {
+                MessageBox.Show("Chọn 1 đối tượng để Chỉnh sửa !!");
+            }
+            else
+            {
+                ListViewItem lvi = lvTaiKhoan.SelectedItems[0];
+                MaTK = lvi.SubItems[0].Text.ToString();
+                LoaiTK = lvi.SubItems[1].Text.ToString();
+                MaNV = lvi.SubItems[2].Text.ToString();
+                Username = lvi.SubItems[3].Text.ToString();
+                Password = lvi.SubItems[4].Text.ToString();
+                frmUpdateTaiKhoan frUpdate = new frmUpdateTaiKhoan();
+                frUpdate.ShowDialog();
+            }
+
         }
 
         private void frmQLTaiKhoan_Load(object sender, EventArgs e)
         {
-            if (lvTaiKhoan.SelectedItems.Count != 1)
-            {
-                btn_UpdateTK.Enabled = false;
-                btn_XoaTK.Enabled = false;
-            }
-            else
-            {
-                btn_UpdateTK.Enabled = true;
-                btn_XoaTK.Enabled = true;
-            }
+            //if (lvTaiKhoan.SelectedItems.Count != 1)
+            //{
+            //    btn_UpdateTK.Enabled = false;
+            //    btn_XoaTK.Enabled = false;
+            //}
+            //else
+            //{
+            //    btn_UpdateTK.Enabled = true;
+            //    btn_XoaTK.Enabled = true;
+            //}
         }
     }
 }
