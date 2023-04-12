@@ -121,5 +121,32 @@ namespace DAL
                 return "yes";
             }
         }
+
+        public List<TaiKhoan> SearchTaiKhoanDAL(string key)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select* from ACCOUNT where LoaiTK=N'"+key+"' or MaNV=N'"+key+"' or Usrname=N'"+key+"'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string matk = reader.GetString(0);
+                string loaitk = reader.GetString(1);
+                string manv = reader.GetString(2);
+                string usrname = reader.GetString(3);
+                string pass = reader.GetString(4);
+                TaiKhoan acc = new TaiKhoan();
+                acc.MaTK = matk;
+                acc.LoaiTK = loaitk;
+                acc.MaNV = manv;
+                acc.Username = usrname;
+                acc.Password = pass;
+                dsTK.Add(acc);
+            }
+            reader.Close();
+            return dsTK;
+        }
     }
 }

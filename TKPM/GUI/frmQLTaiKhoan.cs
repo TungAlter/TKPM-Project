@@ -125,5 +125,25 @@ namespace GUI
             //    btn_XoaTK.Enabled = true;
             //}
         }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            TaiKhoanBLL tkbll = new TaiKhoanBLL();
+            List<TaiKhoan> dstkGUI = null;
+            string key = text_SearchKey.Text.ToString();
+            dstkGUI = tkbll.SearchTaiKhoanBLL(key);
+            lvTaiKhoan.BeginUpdate();
+            lvTaiKhoan.Items.Clear();
+            foreach (TaiKhoan tk in dstkGUI)
+            {
+                ListViewItem lvi = new ListViewItem(tk.MaTK);
+                lvi.SubItems.Add(tk.LoaiTK);
+                lvi.SubItems.Add(tk.MaNV);
+                lvi.SubItems.Add(tk.Username);
+                lvi.SubItems.Add(tk.Password);
+                lvTaiKhoan.Items.Add(lvi);
+            }
+            lvTaiKhoan.EndUpdate();
+        }
     }
 }

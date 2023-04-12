@@ -71,5 +71,12 @@ namespace BUS
             }
             return 0;
         }
+
+        public List<TaiKhoan> SearchTaiKhoanBLL(string key)
+        {
+            return taikhoan.SearchTaiKhoanDAL(key);
+        }
     }
+
+    
 }

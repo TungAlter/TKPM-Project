@@ -146,14 +146,14 @@
             // 
             this.Body_panel.Location = new System.Drawing.Point(1, 29);
             this.Body_panel.Name = "Body_panel";
-            this.Body_panel.Size = new System.Drawing.Size(712, 313);
+            this.Body_panel.Size = new System.Drawing.Size(712, 300);
             this.Body_panel.TabIndex = 5;
             // 
             // frmADMIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 343);
+            this.ClientSize = new System.Drawing.Size(713, 330);
             this.Controls.Add(this.Body_panel);
             this.Controls.Add(this.Header_panel);
             this.Name = "frmADMIN";

@@ -23,7 +23,7 @@ namespace GUI
                 int result = TaiKhoan.CheckLoginBLL(usrname, password);
                 if (result == 0)
                 {
-                    MessageBox.Show("Chào ADMIN !!!");
+                    //MessageBox.Show("Chào ADMIN !!!");
                     this.Hide();
                     
                     frmADMIN admin = new frmADMIN();

@@ -49,6 +49,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_UpdateTK = new System.Windows.Forms.Button();
+            this.btn_TimKiem = new System.Windows.Forms.Button();
+            this.text_SearchKey = new System.Windows.Forms.TextBox();
             this.grpbox_ThemTK.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,7 +98,7 @@
             // 
             // btn_dsTK
             // 
-            this.btn_dsTK.Location = new System.Drawing.Point(412, 199);
+            this.btn_dsTK.Location = new System.Drawing.Point(381, 253);
             this.btn_dsTK.Name = "btn_dsTK";
             this.btn_dsTK.Size = new System.Drawing.Size(75, 34);
             this.btn_dsTK.TabIndex = 2;
@@ -114,7 +116,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 19);
+            this.label1.Location = new System.Drawing.Point(6, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 15);
             this.label1.TabIndex = 4;
@@ -122,7 +124,7 @@
             // 
             // btn_XoaTK
             // 
-            this.btn_XoaTK.Location = new System.Drawing.Point(504, 199);
+            this.btn_XoaTK.Location = new System.Drawing.Point(488, 253);
             this.btn_XoaTK.Name = "btn_XoaTK";
             this.btn_XoaTK.Size = new System.Drawing.Size(75, 34);
             this.btn_XoaTK.TabIndex = 5;
@@ -143,7 +145,8 @@
             this.grpbox_ThemTK.Controls.Add(this.label2);
             this.grpbox_ThemTK.Controls.Add(this.label1);
             this.grpbox_ThemTK.Controls.Add(this.txt_matk);
-            this.grpbox_ThemTK.Location = new System.Drawing.Point(360, 1);
+            this.grpbox_ThemTK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.grpbox_ThemTK.Location = new System.Drawing.Point(360, 66);
             this.grpbox_ThemTK.Name = "grpbox_ThemTK";
             this.grpbox_ThemTK.Size = new System.Drawing.Size(347, 163);
             this.grpbox_ThemTK.TabIndex = 6;
@@ -232,7 +235,7 @@
             // 
             // btn_UpdateTK
             // 
-            this.btn_UpdateTK.Location = new System.Drawing.Point(600, 199);
+            this.btn_UpdateTK.Location = new System.Drawing.Point(600, 253);
             this.btn_UpdateTK.Name = "btn_UpdateTK";
             this.btn_UpdateTK.Size = new System.Drawing.Size(75, 34);
             this.btn_UpdateTK.TabIndex = 7;
@@ -240,11 +243,31 @@
             this.btn_UpdateTK.UseVisualStyleBackColor = true;
             this.btn_UpdateTK.Click += new System.EventHandler(this.btn_UpdateTK_Click);
             // 
+            // btn_TimKiem
+            // 
+            this.btn_TimKiem.Location = new System.Drawing.Point(601, 21);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Size = new System.Drawing.Size(94, 23);
+            this.btn_TimKiem.TabIndex = 8;
+            this.btn_TimKiem.Text = "Tìm Kiếm";
+            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
+            // 
+            // text_SearchKey
+            // 
+            this.text_SearchKey.Location = new System.Drawing.Point(360, 20);
+            this.text_SearchKey.Name = "text_SearchKey";
+            this.text_SearchKey.PlaceholderText = "Search....";
+            this.text_SearchKey.Size = new System.Drawing.Size(235, 23);
+            this.text_SearchKey.TabIndex = 9;
+            // 
             // frmQLTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 352);
+            this.ClientSize = new System.Drawing.Size(707, 308);
+            this.Controls.Add(this.text_SearchKey);
+            this.Controls.Add(this.btn_TimKiem);
             this.Controls.Add(this.btn_UpdateTK);
             this.Controls.Add(this.grpbox_ThemTK);
             this.Controls.Add(this.btn_XoaTK);
@@ -256,6 +279,7 @@
             this.grpbox_ThemTK.ResumeLayout(false);
             this.grpbox_ThemTK.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -282,5 +306,7 @@
         private ComboBox cbx_loaitk;
         private Button btn_ThemTK;
         private Button btn_UpdateTK;
+        private Button btn_TimKiem;
+        private TextBox text_SearchKey;
     }
 }
