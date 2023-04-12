@@ -101,5 +101,25 @@ namespace DAL
                 return "yes";
             }
         }
+
+        public string UpdateTaiKhoanDAL(TaiKhoan tk)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "UPDATE ACCOUNT SET MaNV=N'"+tk.MaNV+"',Usrname=N'"+tk.Username+"',Pwd=N'"+tk.Password+"' WHERE MaTK=N'"+tk.MaTK+"'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return "no";
+            }
+            else
+            {
+                reader.Close();
+                return "yes";
+            }
+        }
     }
 }

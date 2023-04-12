@@ -9,12 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GUI
 {
     public partial class frmQLTaiKhoan : Form
     {
-        
+        public static string MaTK = "";
+        public static string LoaiTK = "";
+        public static string MaNV = "";
+        public static string Username = "";
+        public static string Password = "";
         public frmQLTaiKhoan()
         {
             InitializeComponent();
@@ -80,6 +85,32 @@ namespace GUI
             else if (res == 0)
             {
                 MessageBox.Show("Đéo ổn !!");
+            }
+        }
+
+        private void btn_UpdateTK_Click(object sender, EventArgs e)
+        {
+            ListViewItem lvi = lvTaiKhoan.SelectedItems[0];
+            MaTK = lvi.SubItems[0].Text.ToString();
+            LoaiTK = lvi.SubItems[1].Text.ToString();
+            MaNV = lvi.SubItems[2].Text.ToString();
+            Username = lvi.SubItems[3].Text.ToString();
+            Password = lvi.SubItems[4].Text.ToString();
+            frmUpdateTaiKhoan frUpdate = new frmUpdateTaiKhoan();
+            frUpdate.ShowDialog();
+        }
+
+        private void frmQLTaiKhoan_Load(object sender, EventArgs e)
+        {
+            if (lvTaiKhoan.SelectedItems.Count != 1)
+            {
+                btn_UpdateTK.Enabled = false;
+                btn_XoaTK.Enabled = false;
+            }
+            else
+            {
+                btn_UpdateTK.Enabled = true;
+                btn_XoaTK.Enabled = true;
             }
         }
     }

@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_XoaTK = new System.Windows.Forms.Button();
             this.grpbox_ThemTK = new System.Windows.Forms.GroupBox();
+            this.btn_ThemTK = new System.Windows.Forms.Button();
             this.txt_pwd = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_usrname = new System.Windows.Forms.TextBox();
@@ -47,7 +48,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_ThemTK = new System.Windows.Forms.Button();
+            this.btn_UpdateTK = new System.Windows.Forms.Button();
             this.grpbox_ThemTK.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,6 +150,18 @@
             this.grpbox_ThemTK.TabStop = false;
             this.grpbox_ThemTK.Text = "Thêm Tài Khoản";
             // 
+            // btn_ThemTK
+            // 
+            this.btn_ThemTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_ThemTK.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_ThemTK.Location = new System.Drawing.Point(174, 12);
+            this.btn_ThemTK.Name = "btn_ThemTK";
+            this.btn_ThemTK.Size = new System.Drawing.Size(141, 29);
+            this.btn_ThemTK.TabIndex = 13;
+            this.btn_ThemTK.Text = "Thêm Tài Khoản";
+            this.btn_ThemTK.UseVisualStyleBackColor = false;
+            this.btn_ThemTK.Click += new System.EventHandler(this.btn_ThemTK_Click);
+            // 
             // txt_pwd
             // 
             this.txt_pwd.Location = new System.Drawing.Point(98, 127);
@@ -217,29 +230,29 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Loại TK";
             // 
-            // btn_ThemTK
+            // btn_UpdateTK
             // 
-            this.btn_ThemTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btn_ThemTK.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_ThemTK.Location = new System.Drawing.Point(174, 12);
-            this.btn_ThemTK.Name = "btn_ThemTK";
-            this.btn_ThemTK.Size = new System.Drawing.Size(141, 29);
-            this.btn_ThemTK.TabIndex = 13;
-            this.btn_ThemTK.Text = "Thêm Tài Khoản";
-            this.btn_ThemTK.UseVisualStyleBackColor = false;
-            this.btn_ThemTK.Click += new System.EventHandler(this.btn_ThemTK_Click);
+            this.btn_UpdateTK.Location = new System.Drawing.Point(600, 199);
+            this.btn_UpdateTK.Name = "btn_UpdateTK";
+            this.btn_UpdateTK.Size = new System.Drawing.Size(75, 34);
+            this.btn_UpdateTK.TabIndex = 7;
+            this.btn_UpdateTK.Text = "Chỉnh Sửa";
+            this.btn_UpdateTK.UseVisualStyleBackColor = true;
+            this.btn_UpdateTK.Click += new System.EventHandler(this.btn_UpdateTK_Click);
             // 
             // frmQLTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 352);
+            this.Controls.Add(this.btn_UpdateTK);
             this.Controls.Add(this.grpbox_ThemTK);
             this.Controls.Add(this.btn_XoaTK);
             this.Controls.Add(this.btn_dsTK);
             this.Controls.Add(this.lvTaiKhoan);
             this.Name = "frmQLTaiKhoan";
             this.Text = "frmQLTaiKhoan";
+            this.Load += new System.EventHandler(this.frmQLTaiKhoan_Load);
             this.grpbox_ThemTK.ResumeLayout(false);
             this.grpbox_ThemTK.PerformLayout();
             this.ResumeLayout(false);
@@ -268,5 +281,6 @@
         private TextBox txt_manv;
         private ComboBox cbx_loaitk;
         private Button btn_ThemTK;
+        private Button btn_UpdateTK;
     }
 }
