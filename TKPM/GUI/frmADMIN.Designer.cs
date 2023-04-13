@@ -50,6 +50,7 @@
             this.btn_QLTK.TabIndex = 0;
             this.btn_QLTK.Text = "QL Tài Khoản";
             this.btn_QLTK.UseVisualStyleBackColor = true;
+            this.btn_QLTK.Click += new System.EventHandler(this.btn_QLTK_Click);
             // 
             // btn_Logut
             // 

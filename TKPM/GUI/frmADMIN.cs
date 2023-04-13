@@ -41,12 +41,17 @@ namespace GUI
 
         private void btn_QLNV_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmQLTaiKhoan());
+            
         }
 
         private void frmADMIN_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_QLTK_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmQLTaiKhoan());
         }
     }
 }
