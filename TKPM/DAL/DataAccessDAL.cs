@@ -12,7 +12,7 @@ namespace DAL
     public class DataAccessDAL
     {
         public SqlConnection connect = null;
-        string strconnect = @"server =DESKTOP-UL4FHN4\SQLEXPRESS ; Database = QLKS_TKPM1 ; Trusted_Connection=True ; TrustServerCertificate=True";
+        string strconnect = @"server =DESKTOP-9KC9AVS ; Database = QLKS_TKPM1 ; Trusted_Connection=True ; TrustServerCertificate=True";
         public void Connection()
         {
             if (connect == null)

@@ -489,19 +489,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\TKPM-Project\\TKPM\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\TKPM-Project\\TKPM\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "E:\\TKPM-Project\\TKPM\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "E:\\TKPM-Project\\TKPM\\DAL\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\TKPM-Project\\TKPM\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\TKPM-Project\\TKPM\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -515,8 +515,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\TKPM-Project\\TKPM\\DTO\\DTO.csproj": {
-              "projectPath": "E:\\TKPM-Project\\TKPM\\DTO\\DTO.csproj"
+            "C:\\Users\\admin\\Documents\\GitHub\\TKPM-Project\\TKPM\\DTO\\DTO.csproj": {
+              "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\TKPM-Project\\TKPM\\DTO\\DTO.csproj"
             }
           }
         }
@@ -552,7 +552,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
