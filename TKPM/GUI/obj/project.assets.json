@@ -528,19 +528,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\TKPM-Project\\TKPM\\GUI\\GUI.csproj",
+      "projectUniqueName": "E:\\TKPM-Project\\TKPM\\GUI\\GUI.csproj",
       "projectName": "GUI",
-      "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\TKPM-Project\\TKPM\\GUI\\GUI.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\TKPM-Project\\TKPM\\GUI\\obj\\",
+      "projectPath": "E:\\TKPM-Project\\TKPM\\GUI\\GUI.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "E:\\TKPM-Project\\TKPM\\GUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -554,11 +554,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\admin\\Documents\\GitHub\\TKPM-Project\\TKPM\\BUS\\BUS.csproj": {
-              "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\TKPM-Project\\TKPM\\BUS\\BUS.csproj"
+            "E:\\TKPM-Project\\TKPM\\BUS\\BUS.csproj": {
+              "projectPath": "E:\\TKPM-Project\\TKPM\\BUS\\BUS.csproj"
             },
-            "C:\\Users\\admin\\Documents\\GitHub\\TKPM-Project\\TKPM\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\TKPM-Project\\TKPM\\DTO\\DTO.csproj"
+            "E:\\TKPM-Project\\TKPM\\DTO\\DTO.csproj": {
+              "projectPath": "E:\\TKPM-Project\\TKPM\\DTO\\DTO.csproj"
             }
           }
         }
@@ -591,7 +591,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

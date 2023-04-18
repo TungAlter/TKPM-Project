@@ -51,17 +51,17 @@ namespace GUI
             {
                 //.Items.Clear();
                 ListViewItem lvi = lvTaiKhoan.SelectedItems[0];
-                string maTk = lvi.SubItems[0].Text.ToString();
+                string maTk=lvi.SubItems[0].Text.ToString();
                 int res = tkbll.XoaTaiKhoanBLL(maTk);
-                if (res == 1)
+                if(res == 1)
                 {
                     MessageBox.Show("Xóa Thành Công !!");
                 }
                 else if (res == 0)
                 {
-                    MessageBox.Show("Xóa Không Thành Công");
+                    MessageBox.Show("Đéo ổn !!");
                 }
-            }
+            } 
             else
             {
                 MessageBox.Show("Chọn 1 đối tượng để xóa !!");
