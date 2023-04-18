@@ -19,7 +19,7 @@ namespace GUI
         private Form currentFormChild;
         private void OpenChildForm(Form ChildForm)
         {
-            if (currentFormChild != null)
+            if(currentFormChild != null)
             {
                 currentFormChild.Close();
             }
@@ -41,7 +41,7 @@ namespace GUI
 
         private void btn_QLNV_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void frmADMIN_Load(object sender, EventArgs e)
@@ -52,11 +52,6 @@ namespace GUI
         private void btn_QLTK_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmQLTaiKhoan());
-        }
-
-        private void btn_QLLoaiPhong_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new frmQLLoaiPhong());
         }
     }
 }
