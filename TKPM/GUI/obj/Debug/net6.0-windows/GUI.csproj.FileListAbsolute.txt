@@ -32,3 +32,5 @@ E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmADMIN.resources
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmQLTaiKhoan.resources
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.Properties.Resources.resources
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmUpdateTaiKhoan.resources
+E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmLETAN.resources
+E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmDatPhong.resources

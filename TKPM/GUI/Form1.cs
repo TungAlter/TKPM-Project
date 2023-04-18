@@ -33,7 +33,12 @@ namespace GUI
                 }
                 else if (result == 1)
                 {
-                    MessageBox.Show("Chào Lễ Tân !!!");
+                    //MessageBox.Show("Chào Lễ Tân !!!");
+                    this.Hide();
+
+                    frmLETAN letan = new frmLETAN();
+                    letan.ShowDialog();
+                    this.Close();
                 }
                 else if (result == -1)
                 {

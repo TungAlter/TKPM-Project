@@ -56,9 +56,9 @@
             // 
             this.btn_Logut.BackColor = System.Drawing.Color.Red;
             this.btn_Logut.BackgroundImage = global::GUI.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout_24;
-            this.btn_Logut.Location = new System.Drawing.Point(670, 0);
+            this.btn_Logut.Location = new System.Drawing.Point(680, 0);
             this.btn_Logut.Name = "btn_Logut";
-            this.btn_Logut.Size = new System.Drawing.Size(39, 29);
+            this.btn_Logut.Size = new System.Drawing.Size(29, 29);
             this.btn_Logut.TabIndex = 1;
             this.btn_Logut.UseVisualStyleBackColor = false;
             this.btn_Logut.Click += new System.EventHandler(this.btn_Logut_Click);
@@ -102,7 +102,7 @@
             // 
             this.btn_ThongKe.Location = new System.Drawing.Point(603, 0);
             this.btn_ThongKe.Name = "btn_ThongKe";
-            this.btn_ThongKe.Size = new System.Drawing.Size(71, 29);
+            this.btn_ThongKe.Size = new System.Drawing.Size(80, 29);
             this.btn_ThongKe.TabIndex = 7;
             this.btn_ThongKe.Text = "Thống Kê";
             this.btn_ThongKe.UseVisualStyleBackColor = true;

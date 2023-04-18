@@ -66,7 +66,7 @@
             this.lvTaiKhoan.GridLines = true;
             this.lvTaiKhoan.Location = new System.Drawing.Point(-1, 1);
             this.lvTaiKhoan.Name = "lvTaiKhoan";
-            this.lvTaiKhoan.Size = new System.Drawing.Size(355, 351);
+            this.lvTaiKhoan.Size = new System.Drawing.Size(355, 306);
             this.lvTaiKhoan.TabIndex = 1;
             this.lvTaiKhoan.UseCompatibleStateImageBehavior = false;
             this.lvTaiKhoan.View = System.Windows.Forms.View.Details;
