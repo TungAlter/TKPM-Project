@@ -5,8 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Security.Cryptography;
-
 namespace DAL
 {
     public class DataAccessDAL
@@ -31,14 +29,6 @@ namespace DAL
             {
                 connect.Close();
             }
-        }
-
-        public string RandomGenerate(string key)
-        {
-            Random rand = new Random();   
-            int number = rand.Next(11,99);
-            string res = key + number.ToString();
-            return res;
         }
     }
 }
