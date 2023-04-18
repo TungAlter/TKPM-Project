@@ -90,10 +90,6 @@ namespace GUI
             {
                 MessageBox.Show("Đéo ổn !!");
             }
-            else if(res == -1)
-            {
-                MessageBox.Show("Các trường không được để trống !!");
-            }
         }
 
         private void btn_UpdateTK_Click(object sender, EventArgs e)

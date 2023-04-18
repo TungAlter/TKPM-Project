@@ -46,10 +46,6 @@ namespace BUS
 
         public int ThemTaiKhoanBLL(TaiKhoan tk)
         {
-            if(tk.LoaiTK=="" || tk.MaTK=="" || tk.Username=="" || tk.Password=="" || tk.MaNV=="")
-            {
-                return -1;
-            }
             string res = taikhoan.ThemTaiKhoanDAL(tk);
             if (res == "yes")
             {
