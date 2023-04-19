@@ -30,5 +30,13 @@ namespace DAL
                 connect.Close();
             }
         }
+
+        public string AutoGenerate(string key)
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(10, 99);
+            string res = key + x.ToString();
+            return res;
+        }
     }
 }
