@@ -30,8 +30,9 @@
         {
             this.Body_panel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_DatPhong = new System.Windows.Forms.Button();
+            this.btn_QLKH = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
+            this.btn_DatPhong = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,23 +46,26 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.btn_QLKH);
             this.panel2.Controls.Add(this.btn_Exit);
             this.panel2.Controls.Add(this.btn_DatPhong);
             this.panel2.Location = new System.Drawing.Point(1, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(110, 449);
+            this.panel2.Size = new System.Drawing.Size(108, 449);
             this.panel2.TabIndex = 1;
             // 
-            // btn_DatPhong
+            // btn_QLKH
             // 
-            this.btn_DatPhong.BackColor = System.Drawing.Color.SandyBrown;
-            this.btn_DatPhong.Location = new System.Drawing.Point(0, 0);
-            this.btn_DatPhong.Name = "btn_DatPhong";
-            this.btn_DatPhong.Size = new System.Drawing.Size(110, 51);
-            this.btn_DatPhong.TabIndex = 0;
-            this.btn_DatPhong.Text = "Đặt Phòng";
-            this.btn_DatPhong.UseVisualStyleBackColor = false;
-            this.btn_DatPhong.Click += new System.EventHandler(this.btn_DatPhong_Click);
+            this.btn_QLKH.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_QLKH.FlatAppearance.BorderSize = 0;
+            this.btn_QLKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QLKH.Location = new System.Drawing.Point(0, 48);
+            this.btn_QLKH.Name = "btn_QLKH";
+            this.btn_QLKH.Size = new System.Drawing.Size(110, 51);
+            this.btn_QLKH.TabIndex = 2;
+            this.btn_QLKH.Text = "QL Khách Hàng";
+            this.btn_QLKH.UseVisualStyleBackColor = false;
+            this.btn_QLKH.Click += new System.EventHandler(this.btn_QLKH_Click);
             // 
             // btn_Exit
             // 
@@ -73,6 +77,19 @@
             this.btn_Exit.Text = "Đăng Xuất";
             this.btn_Exit.UseVisualStyleBackColor = false;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            // 
+            // btn_DatPhong
+            // 
+            this.btn_DatPhong.BackColor = System.Drawing.Color.BurlyWood;
+            this.btn_DatPhong.FlatAppearance.BorderSize = 0;
+            this.btn_DatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DatPhong.Location = new System.Drawing.Point(0, 0);
+            this.btn_DatPhong.Name = "btn_DatPhong";
+            this.btn_DatPhong.Size = new System.Drawing.Size(110, 51);
+            this.btn_DatPhong.TabIndex = 0;
+            this.btn_DatPhong.Text = "Đặt Phòng";
+            this.btn_DatPhong.UseVisualStyleBackColor = false;
+            this.btn_DatPhong.Click += new System.EventHandler(this.btn_DatPhong_Click);
             // 
             // frmLETAN
             // 
@@ -94,5 +111,6 @@
         private Panel panel2;
         private Button btn_Exit;
         private Button btn_DatPhong;
+        private Button btn_QLKH;
     }
 }

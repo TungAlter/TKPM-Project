@@ -72,3 +72,5 @@ C:\Users\admin\Documents\GitHub\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\r
 C:\Users\admin\Documents\GitHub\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.pdb
 C:\Users\admin\Documents\GitHub\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.genruntimeconfig.cache
 C:\Users\admin\Documents\GitHub\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\ref\GUI.dll
+E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmQLKhachHang.resources
+E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmThemKH.resources

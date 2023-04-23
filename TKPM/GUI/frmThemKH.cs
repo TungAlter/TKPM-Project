@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmPhieuDatPhong : Form
+    public partial class frmThemKH : Form
     {
-        public frmPhieuDatPhong()
+        public frmThemKH()
         {
             InitializeComponent();
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
