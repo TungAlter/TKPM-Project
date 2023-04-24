@@ -47,7 +47,7 @@ namespace GUI
 
         private void btn_QLKH_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new frmQLKhachHang());
         }
     }
 }

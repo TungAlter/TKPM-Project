@@ -131,9 +131,10 @@
             // 
             // Body_panel
             // 
+            this.Body_panel.AutoSize = true;
             this.Body_panel.Location = new System.Drawing.Point(181, 95);
             this.Body_panel.Name = "Body_panel";
-            this.Body_panel.Size = new System.Drawing.Size(747, 421);
+            this.Body_panel.Size = new System.Drawing.Size(765, 421);
             this.Body_panel.TabIndex = 5;
             // 
             // panel1
@@ -237,7 +238,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(180, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(747, 46);
+            this.panel2.Size = new System.Drawing.Size(766, 46);
             this.panel2.TabIndex = 7;
             // 
             // label3
@@ -284,7 +285,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(927, 516);
+            this.ClientSize = new System.Drawing.Size(946, 516);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btn_Logut);
             this.Controls.Add(this.lb_time);

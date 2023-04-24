@@ -49,7 +49,7 @@
             // 
             this.Body_panel.Location = new System.Drawing.Point(180, 107);
             this.Body_panel.Name = "Body_panel";
-            this.Body_panel.Size = new System.Drawing.Size(719, 356);
+            this.Body_panel.Size = new System.Drawing.Size(720, 395);
             this.Body_panel.TabIndex = 0;
             // 
             // panel2
@@ -59,7 +59,7 @@
             this.panel2.Controls.Add(this.btn_DatPhong);
             this.panel2.Location = new System.Drawing.Point(1, 120);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(179, 346);
+            this.panel2.Size = new System.Drawing.Size(179, 382);
             this.panel2.TabIndex = 1;
             // 
             // btn_QLKH
@@ -72,7 +72,7 @@
             this.btn_QLKH.Name = "btn_QLKH";
             this.btn_QLKH.Size = new System.Drawing.Size(153, 51);
             this.btn_QLKH.TabIndex = 2;
-            this.btn_QLKH.Text = "Quản lí Khách Hàng";
+            this.btn_QLKH.Text = "    QL Khách Hàng";
             this.btn_QLKH.UseVisualStyleBackColor = false;
             this.btn_QLKH.Click += new System.EventHandler(this.btn_QLKH_Click);
             // 
@@ -155,7 +155,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(180, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(719, 46);
+            this.panel1.Size = new System.Drawing.Size(720, 46);
             this.panel1.TabIndex = 8;
             // 
             // label3
@@ -175,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(899, 465);
+            this.ClientSize = new System.Drawing.Size(901, 501);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.Header_panel);

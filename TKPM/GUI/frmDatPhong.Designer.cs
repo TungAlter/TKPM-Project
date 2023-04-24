@@ -53,7 +53,7 @@
             this.groupBox1.Controls.Add(this.lv_dsPhongTrong);
             this.groupBox1.Location = new System.Drawing.Point(12, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(570, 167);
+            this.groupBox1.Size = new System.Drawing.Size(604, 167);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Phòng Trống";
@@ -70,9 +70,9 @@
             this.Trangthai});
             this.lv_dsPhongTrong.FullRowSelect = true;
             this.lv_dsPhongTrong.GridLines = true;
-            this.lv_dsPhongTrong.Location = new System.Drawing.Point(6, 22);
+            this.lv_dsPhongTrong.Location = new System.Drawing.Point(22, 22);
             this.lv_dsPhongTrong.Name = "lv_dsPhongTrong";
-            this.lv_dsPhongTrong.Size = new System.Drawing.Size(569, 139);
+            this.lv_dsPhongTrong.Size = new System.Drawing.Size(570, 139);
             this.lv_dsPhongTrong.TabIndex = 0;
             this.lv_dsPhongTrong.UseCompatibleStateImageBehavior = false;
             this.lv_dsPhongTrong.View = System.Windows.Forms.View.Details;
@@ -104,7 +104,7 @@
             // 
             // btn_dsPhong
             // 
-            this.btn_dsPhong.Location = new System.Drawing.Point(600, 23);
+            this.btn_dsPhong.Location = new System.Drawing.Point(622, 38);
             this.btn_dsPhong.Name = "btn_dsPhong";
             this.btn_dsPhong.Size = new System.Drawing.Size(72, 31);
             this.btn_dsPhong.TabIndex = 1;
@@ -117,7 +117,7 @@
             this.groupBox2.Controls.Add(this.lv_ttDatPhong);
             this.groupBox2.Location = new System.Drawing.Point(12, 174);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(570, 237);
+            this.groupBox2.Size = new System.Drawing.Size(604, 212);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tình Trạng Đặt Phòng";
@@ -132,9 +132,9 @@
             this.tongtien});
             this.lv_ttDatPhong.FullRowSelect = true;
             this.lv_ttDatPhong.GridLines = true;
-            this.lv_ttDatPhong.Location = new System.Drawing.Point(6, 22);
+            this.lv_ttDatPhong.Location = new System.Drawing.Point(22, 22);
             this.lv_ttDatPhong.Name = "lv_ttDatPhong";
-            this.lv_ttDatPhong.Size = new System.Drawing.Size(569, 209);
+            this.lv_ttDatPhong.Size = new System.Drawing.Size(570, 182);
             this.lv_ttDatPhong.TabIndex = 0;
             this.lv_ttDatPhong.UseCompatibleStateImageBehavior = false;
             this.lv_ttDatPhong.View = System.Windows.Forms.View.Details;
@@ -169,7 +169,7 @@
             // 
             // btn_DatPhong
             // 
-            this.btn_DatPhong.Location = new System.Drawing.Point(600, 131);
+            this.btn_DatPhong.Location = new System.Drawing.Point(622, 96);
             this.btn_DatPhong.Name = "btn_DatPhong";
             this.btn_DatPhong.Size = new System.Drawing.Size(72, 31);
             this.btn_DatPhong.TabIndex = 3;
@@ -182,11 +182,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
-            this.ClientSize = new System.Drawing.Size(674, 410);
+            this.ClientSize = new System.Drawing.Size(715, 390);
             this.Controls.Add(this.btn_DatPhong);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btn_dsPhong);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDatPhong";
             this.Text = "frmDatPhong";
             this.groupBox1.ResumeLayout(false);
