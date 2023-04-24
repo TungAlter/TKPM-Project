@@ -37,13 +37,13 @@
             this.Trangthai = new System.Windows.Forms.ColumnHeader();
             this.btn_dsPhong = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_DatPhong = new System.Windows.Forms.Button();
             this.lv_ttDatPhong = new System.Windows.Forms.ListView();
             this.tenphong = new System.Windows.Forms.ColumnHeader();
             this.tenkh = new System.Windows.Forms.ColumnHeader();
             this.ngaybd = new System.Windows.Forms.ColumnHeader();
             this.ngaykt = new System.Windows.Forms.ColumnHeader();
             this.tongtien = new System.Windows.Forms.ColumnHeader();
+            this.btn_DatPhong = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -51,9 +51,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lv_dsPhongTrong);
-            this.groupBox1.Location = new System.Drawing.Point(1, 1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(581, 167);
+            this.groupBox1.Size = new System.Drawing.Size(570, 167);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Phòng Trống";
@@ -104,9 +104,9 @@
             // 
             // btn_dsPhong
             // 
-            this.btn_dsPhong.Location = new System.Drawing.Point(588, 23);
+            this.btn_dsPhong.Location = new System.Drawing.Point(600, 23);
             this.btn_dsPhong.Name = "btn_dsPhong";
-            this.btn_dsPhong.Size = new System.Drawing.Size(84, 31);
+            this.btn_dsPhong.Size = new System.Drawing.Size(72, 31);
             this.btn_dsPhong.TabIndex = 1;
             this.btn_dsPhong.Text = "Danh sách";
             this.btn_dsPhong.UseVisualStyleBackColor = true;
@@ -115,22 +115,12 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lv_ttDatPhong);
-            this.groupBox2.Location = new System.Drawing.Point(1, 174);
+            this.groupBox2.Location = new System.Drawing.Point(12, 174);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(581, 237);
+            this.groupBox2.Size = new System.Drawing.Size(570, 237);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tình Trạng Đặt Phòng";
-            // 
-            // btn_DatPhong
-            // 
-            this.btn_DatPhong.Location = new System.Drawing.Point(588, 131);
-            this.btn_DatPhong.Name = "btn_DatPhong";
-            this.btn_DatPhong.Size = new System.Drawing.Size(84, 31);
-            this.btn_DatPhong.TabIndex = 3;
-            this.btn_DatPhong.Text = "Đặt Phòng";
-            this.btn_DatPhong.UseVisualStyleBackColor = true;
-            this.btn_DatPhong.Click += new System.EventHandler(this.btn_DatPhong_Click);
             // 
             // lv_ttDatPhong
             // 
@@ -176,6 +166,16 @@
             // 
             this.tongtien.Text = "Tổng Tiền";
             this.tongtien.Width = 120;
+            // 
+            // btn_DatPhong
+            // 
+            this.btn_DatPhong.Location = new System.Drawing.Point(600, 131);
+            this.btn_DatPhong.Name = "btn_DatPhong";
+            this.btn_DatPhong.Size = new System.Drawing.Size(72, 31);
+            this.btn_DatPhong.TabIndex = 3;
+            this.btn_DatPhong.Text = "Đặt Phòng";
+            this.btn_DatPhong.UseVisualStyleBackColor = true;
+            this.btn_DatPhong.Click += new System.EventHandler(this.btn_DatPhong_Click);
             // 
             // frmDatPhong
             // 
