@@ -25,7 +25,7 @@ namespace GUI
             KhachHang kh = new KhachHang();
             //kh.MaTK = txt_matk.Text.ToString();
             kh.TenKH = txt_TenKH.Text.ToString();
-            kh.NgaySinh = txt_Birth.Text.ToString();
+            kh.NgaySinh = txt_yearBirth.Text.ToString()+"-"+txt_monthBirth.Text.ToString()+"-"+txt_DayBirth.Text.ToString();
             kh.CMND = txt_CMND.Text.ToString();
             kh.DiaChi = txt_DiaChi.Text.ToString();
             int res = tkbll.ThemKhachHangBLL(kh);

@@ -84,6 +84,7 @@
             this.birthKH,
             this.CmndKH,
             this.addressKH});
+            this.lv_KhachHang.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lv_KhachHang.FullRowSelect = true;
             this.lv_KhachHang.GridLines = true;
             this.lv_KhachHang.Location = new System.Drawing.Point(12, 51);
@@ -95,7 +96,7 @@
             // 
             // maKH
             // 
-            this.maKH.Text = "Mã Khách Hàng";
+            this.maKH.Text = "Mã KH";
             this.maKH.Width = 100;
             // 
             // tenKH

@@ -38,7 +38,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_XacNhan = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
-            this.txt_Birth = new System.Windows.Forms.TextBox();
+            this.txt_DayBirth = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_monthBirth = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_yearBirth = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label12
@@ -55,7 +59,7 @@
             this.txt_DiaChi.Location = new System.Drawing.Point(82, 222);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.Size = new System.Drawing.Size(257, 23);
-            this.txt_DiaChi.TabIndex = 5;
+            this.txt_DiaChi.TabIndex = 7;
             // 
             // label11
             // 
@@ -68,15 +72,15 @@
             // 
             // txt_CMND
             // 
-            this.txt_CMND.Location = new System.Drawing.Point(82, 160);
+            this.txt_CMND.Location = new System.Drawing.Point(82, 168);
             this.txt_CMND.Name = "txt_CMND";
             this.txt_CMND.Size = new System.Drawing.Size(134, 23);
-            this.txt_CMND.TabIndex = 4;
+            this.txt_CMND.TabIndex = 6;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 168);
+            this.label10.Location = new System.Drawing.Point(16, 176);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 15);
             this.label10.TabIndex = 3;
@@ -86,7 +90,7 @@
             // 
             this.txt_TenKH.Location = new System.Drawing.Point(82, 64);
             this.txt_TenKH.Name = "txt_TenKH";
-            this.txt_TenKH.Size = new System.Drawing.Size(199, 23);
+            this.txt_TenKH.Size = new System.Drawing.Size(212, 23);
             this.txt_TenKH.TabIndex = 2;
             // 
             // label7
@@ -113,7 +117,7 @@
             this.btn_XacNhan.Location = new System.Drawing.Point(102, 277);
             this.btn_XacNhan.Name = "btn_XacNhan";
             this.btn_XacNhan.Size = new System.Drawing.Size(75, 23);
-            this.btn_XacNhan.TabIndex = 7;
+            this.btn_XacNhan.TabIndex = 8;
             this.btn_XacNhan.Text = "Xác Nhận";
             this.btn_XacNhan.UseVisualStyleBackColor = true;
             this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
@@ -123,24 +127,62 @@
             this.btn_Exit.Location = new System.Drawing.Point(180, 277);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(75, 23);
-            this.btn_Exit.TabIndex = 8;
+            this.btn_Exit.TabIndex = 9;
             this.btn_Exit.Text = "Hủy";
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
-            // txt_Birth
+            // txt_DayBirth
             // 
-            this.txt_Birth.Location = new System.Drawing.Point(82, 119);
-            this.txt_Birth.Name = "txt_Birth";
-            this.txt_Birth.Size = new System.Drawing.Size(134, 23);
-            this.txt_Birth.TabIndex = 9;
+            this.txt_DayBirth.Location = new System.Drawing.Point(82, 119);
+            this.txt_DayBirth.Name = "txt_DayBirth";
+            this.txt_DayBirth.Size = new System.Drawing.Size(46, 23);
+            this.txt_DayBirth.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(134, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 21);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "/";
+            // 
+            // txt_monthBirth
+            // 
+            this.txt_monthBirth.Location = new System.Drawing.Point(156, 119);
+            this.txt_monthBirth.Name = "txt_monthBirth";
+            this.txt_monthBirth.Size = new System.Drawing.Size(43, 23);
+            this.txt_monthBirth.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(205, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 21);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "/";
+            // 
+            // txt_yearBirth
+            // 
+            this.txt_yearBirth.Location = new System.Drawing.Point(227, 121);
+            this.txt_yearBirth.Name = "txt_yearBirth";
+            this.txt_yearBirth.Size = new System.Drawing.Size(67, 23);
+            this.txt_yearBirth.TabIndex = 5;
             // 
             // frmThemKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 303);
-            this.Controls.Add(this.txt_Birth);
+            this.Controls.Add(this.txt_yearBirth);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txt_monthBirth);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txt_DayBirth);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_XacNhan);
             this.Controls.Add(this.label1);
@@ -169,6 +211,10 @@
         private Label label1;
         private Button btn_XacNhan;
         private Button btn_Exit;
-        private TextBox txt_Birth;
+        private TextBox txt_DayBirth;
+        private Label label2;
+        private TextBox txt_monthBirth;
+        private Label label3;
+        private TextBox txt_yearBirth;
     }
 }
