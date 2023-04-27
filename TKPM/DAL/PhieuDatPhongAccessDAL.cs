@@ -73,5 +73,24 @@ namespace DAL
             reader.Close();
             return dsPD;
         }
+
+        public string ThemPhieuDatPhongDAL( PhieuDatPhong pd) {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "INSERT INTO PHIEUDATPHONG VALUES (N'" + pd.MaPhieu + "', N'" + pd.MaKH + "',N'" + pd.MaPhongThue + "',N'" + pd.NgayBD + "',N'" + pd.NgayKT +"',N'" + pd.TongTien + "')";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return "no";
+            }
+            else
+            {
+                reader.Close();
+                return "yes";
+            }
+        }
     }
 }

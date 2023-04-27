@@ -34,7 +34,7 @@
             this.Loaiph = new System.Windows.Forms.ColumnHeader();
             this.Giatien = new System.Windows.Forms.ColumnHeader();
             this.Songuoi = new System.Windows.Forms.ColumnHeader();
-            this.Trangthai = new System.Windows.Forms.ColumnHeader();
+            this.TinhTrang = new System.Windows.Forms.ColumnHeader();
             this.btn_dsPhong = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lv_ttDatPhong = new System.Windows.Forms.ListView();
@@ -68,7 +68,7 @@
             this.Loaiph,
             this.Giatien,
             this.Songuoi,
-            this.Trangthai});
+            this.TinhTrang});
             this.lv_dsPhongTrong.FullRowSelect = true;
             this.lv_dsPhongTrong.GridLines = true;
             this.lv_dsPhongTrong.Location = new System.Drawing.Point(22, 22);
@@ -98,10 +98,10 @@
             this.Songuoi.Text = "Số Người";
             this.Songuoi.Width = 80;
             // 
-            // Trangthai
+            // TinhTrang
             // 
-            this.Trangthai.Text = "Trạng Thái";
-            this.Trangthai.Width = 100;
+            this.TinhTrang.Text = "Tình Trạng";
+            this.TinhTrang.Width = 100;
             // 
             // btn_dsPhong
             // 
@@ -208,7 +208,7 @@
         private ColumnHeader Loaiph;
         private ColumnHeader Giatien;
         private ColumnHeader Songuoi;
-        private ColumnHeader Trangthai;
+        private ColumnHeader TinhTrang;
         private Button btn_dsPhong;
         private GroupBox groupBox2;
         private ListView lv_ttDatPhong;

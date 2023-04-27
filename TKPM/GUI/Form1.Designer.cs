@@ -54,6 +54,7 @@
             this.btn_DangNhap.BackColor = System.Drawing.Color.SpringGreen;
             this.btn_DangNhap.FlatAppearance.BorderSize = 0;
             this.btn_DangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_DangNhap.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_DangNhap.Location = new System.Drawing.Point(237, 242);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(193, 40);
@@ -107,6 +108,7 @@
             this.btn_Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_Exit.FlatAppearance.BorderSize = 0;
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Exit.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Exit.Location = new System.Drawing.Point(450, 242);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(178, 40);

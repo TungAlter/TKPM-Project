@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace GUI
 {
@@ -67,6 +68,15 @@ namespace GUI
             int songay = (ngaykt - ngaybd).Days;
             int tongtien = songay * Convert.ToInt32(this.lb_Giaph.Text);
             pd.TongTien = tongtien.ToString();
+            PhieuDatPhongBLL pdpbll = new PhieuDatPhongBLL();
+            int res = pdpbll.ThemPhieuDatPhongBLL(pd);
+            if (res == 0)
+            {
+                MessageBox.Show("Thất bại !!");
+            } else if (res == 1 )
+            {
+                MessageBox.Show("Thành Công !!");
+            }
         }
     }
 }

@@ -44,5 +44,25 @@ namespace DAL
             reader.Close();
             return Rooms;
         }
+
+        public string UpdateTrangThaiPhong(string ma_phong, string trangthai)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "UPDATE PHONG SET TinhTrang='" + trangthai + "' WHERE MaPhong=N'" + ma_phong + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return "no";
+            }
+            else
+            {
+                reader.Close();
+                return "yes";
+            }
+        }
     }
 }
