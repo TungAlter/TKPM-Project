@@ -38,6 +38,7 @@
             this.birthKH = new System.Windows.Forms.ColumnHeader();
             this.CmndKH = new System.Windows.Forms.ColumnHeader();
             this.addressKH = new System.Windows.Forms.ColumnHeader();
+            this.btn_dsKH = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -60,16 +61,17 @@
             // 
             this.btn_addKH.Location = new System.Drawing.Point(12, 12);
             this.btn_addKH.Name = "btn_addKH";
-            this.btn_addKH.Size = new System.Drawing.Size(148, 23);
+            this.btn_addKH.Size = new System.Drawing.Size(123, 23);
             this.btn_addKH.TabIndex = 2;
             this.btn_addKH.Text = "Thêm Khách Hàng";
             this.btn_addKH.UseVisualStyleBackColor = true;
+            this.btn_addKH.Click += new System.EventHandler(this.btn_addKH_Click);
             // 
             // btn_updateKH
             // 
-            this.btn_updateKH.Location = new System.Drawing.Point(197, 12);
+            this.btn_updateKH.Location = new System.Drawing.Point(159, 12);
             this.btn_updateKH.Name = "btn_updateKH";
-            this.btn_updateKH.Size = new System.Drawing.Size(148, 23);
+            this.btn_updateKH.Size = new System.Drawing.Size(85, 23);
             this.btn_updateKH.TabIndex = 3;
             this.btn_updateKH.Text = "Chỉnh sửa";
             this.btn_updateKH.UseVisualStyleBackColor = true;
@@ -82,6 +84,7 @@
             this.birthKH,
             this.CmndKH,
             this.addressKH});
+            this.lv_KhachHang.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lv_KhachHang.FullRowSelect = true;
             this.lv_KhachHang.GridLines = true;
             this.lv_KhachHang.Location = new System.Drawing.Point(12, 51);
@@ -93,7 +96,7 @@
             // 
             // maKH
             // 
-            this.maKH.Text = "Mã Khách Hàng";
+            this.maKH.Text = "Mã KH";
             this.maKH.Width = 100;
             // 
             // tenKH
@@ -119,12 +122,23 @@
             this.addressKH.Text = "Địa Chỉ";
             this.addressKH.Width = 250;
             // 
+            // btn_dsKH
+            // 
+            this.btn_dsKH.Location = new System.Drawing.Point(267, 12);
+            this.btn_dsKH.Name = "btn_dsKH";
+            this.btn_dsKH.Size = new System.Drawing.Size(85, 23);
+            this.btn_dsKH.TabIndex = 5;
+            this.btn_dsKH.Text = "Danh Sách";
+            this.btn_dsKH.UseVisualStyleBackColor = true;
+            this.btn_dsKH.Click += new System.EventHandler(this.btn_dsKH_Click);
+            // 
             // frmQLKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
             this.ClientSize = new System.Drawing.Size(715, 390);
+            this.Controls.Add(this.btn_dsKH);
             this.Controls.Add(this.lv_KhachHang);
             this.Controls.Add(this.btn_updateKH);
             this.Controls.Add(this.btn_addKH);
@@ -150,5 +164,6 @@
         private ColumnHeader birthKH;
         private ColumnHeader CmndKH;
         private ColumnHeader addressKH;
+        private Button btn_dsKH;
     }
 }
