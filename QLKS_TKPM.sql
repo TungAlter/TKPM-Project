@@ -158,7 +158,7 @@ INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai) VALUES (
 INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai) VALUES (N'P102',N'Phòng 102','Couple',300000,3,N'Chưa dọn',1)
 INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai) VALUES (N'P103',N'Phòng 103','VIP',2000000,6,N'Đã dọn',0)
 
-
+INSERT INTO KHACHHANG(MaKH,TenKH,NgaySinh,CMND,DiaChi) VALUES (N'KH01',N'Duy','1999-03-20',N'123456',N'20 Ngo Quyen')
 create procedure sp_Login
 (
  @userid nvarchar(20),
@@ -167,4 +167,13 @@ create procedure sp_Login
 as 
 begin
 	select * from ACCOUNT where Usrname=@userid and Pwd=@pwd
+end
+
+create procedure sp_MaKhachHang
+(
+ @makh nvarchar(20)
+)
+as 
+begin
+	select * from KHACHHANG where MaKH=@makh
 end
