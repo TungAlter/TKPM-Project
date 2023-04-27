@@ -1,0 +1,61 @@
+﻿using BUS;
+using DTO;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
+namespace GUI
+{
+    public partial class frmXemDSKH : Form
+    {
+        public static string makh = "";
+        public static string tenkh = "";
+        public static string diachi = "";
+        public static string cmnd = "";
+        public frmXemDSKH()
+        {
+            InitializeComponent();
+        }
+
+        private void XemDSKH_Load(object sender, EventArgs e)
+        {
+            KhachHangBLL khbll = new KhachHangBLL();
+            List<KhachHang> dskhGUI = null;
+            dskhGUI = khbll.Lay_Toan_Bo_KH();
+            lv_KhachHang.BeginUpdate();
+            lv_KhachHang.Items.Clear();
+            foreach (KhachHang kh in dskhGUI)
+            {
+                ListViewItem lvi = new ListViewItem(kh.MaKH);
+                lvi.SubItems.Add(kh.TenKH);
+                lvi.SubItems.Add(kh.NgaySinh);
+                lvi.SubItems.Add(kh.CMND);
+                lvi.SubItems.Add(kh.DiaChi);
+                lv_KhachHang.Items.Add(lvi);
+            }
+            lv_KhachHang.EndUpdate();
+        }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_XacNhan_Click(object sender, EventArgs e)
+        {
+            ListViewItem lvi = lv_KhachHang.SelectedItems[0];
+            makh = lvi.SubItems[0].Text.ToString();
+            tenkh = lvi.SubItems[1].Text.ToString();
+            cmnd = lvi.SubItems[3].Text.ToString();
+            diachi = lvi.SubItems[4].Text.ToString();
+            this.Close();
+        }
+    }
+}

@@ -28,6 +28,10 @@ namespace BUS
             {
                 return 0;
             }
+            else if (res=="existed")
+            {
+                return -1;
+            }
             return 0;
         }
 

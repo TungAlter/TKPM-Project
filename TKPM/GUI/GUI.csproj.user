@@ -28,5 +28,8 @@
     <Compile Update="frmUpdateTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmXemDSKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

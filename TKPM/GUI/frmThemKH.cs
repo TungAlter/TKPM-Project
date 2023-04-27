@@ -38,6 +38,10 @@ namespace GUI
             {
                 MessageBox.Show("Đéo ổn !!");
             }
+            else if (res == -1)
+            {
+                MessageBox.Show("Khách Hàng đã tồn tại !!");
+            }
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)

@@ -14,6 +14,9 @@ namespace GUI
 {
     public partial class frmDatPhong : Form
     {
+        public static string Tenphong = "";
+        public static string Loaiphong = "";
+        public static string Giaphong = "";
         public frmDatPhong()
         {
             InitializeComponent();
@@ -28,11 +31,11 @@ namespace GUI
             lv_dsPhongTrong.Items.Clear();
             foreach (Phong ph in dsphGUI)
             {
-                ListViewItem lvi = new ListViewItem(ph.MaPhong);
-                lvi.SubItems.Add(ph.TenPhong);
+                ListViewItem lvi = new ListViewItem(ph.TenPhong);
                 lvi.SubItems.Add(ph.LoaiPhong);
                 lvi.SubItems.Add(ph.GiaThue.ToString());
                 lvi.SubItems.Add(ph.SoNguoi.ToString());
+                //lvi.SubItems.Add(ph.SoNguoi.ToString());
                 lvi.SubItems.Add(ph.TrangThai);
                 //lvi.SubItems.Add(ph.TinhTrang.ToString());
 
@@ -48,20 +51,16 @@ namespace GUI
             {
                 //.Items.Clear();
                 ListViewItem lvi = lv_dsPhongTrong.SelectedItems[0];
-                string maTk = lvi.SubItems[0].Text.ToString();
-                //int res = phbll.XoaTaiKhoanBLL(maTk);
-                //if (res == 1)
-                //{
-                //    MessageBox.Show("Xóa Thành Công !!");
-                //}
-                //else if (res == 0)
-                //{
-                //    MessageBox.Show("Đéo ổn !!");
-                //}
+                Tenphong = lvi.SubItems[0].Text.ToString();
+                Loaiphong = lvi.SubItems[1].Text.ToString();
+                Giaphong = lvi.SubItems[2].Text.ToString();
+                frmPhieuDatPhong frpdp = new frmPhieuDatPhong();
+                frpdp.ShowDialog();
+
             }
             else
             {
-                MessageBox.Show("Chọn 1 đối tượng để xóa !!");
+                MessageBox.Show("Chọn 1 đối tượng để đặt phòng !!");
             }
         }
     }

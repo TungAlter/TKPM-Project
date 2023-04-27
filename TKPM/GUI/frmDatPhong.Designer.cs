@@ -51,9 +51,10 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lv_dsPhongTrong);
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(604, 167);
+            this.groupBox1.Size = new System.Drawing.Size(613, 167);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Phòng Trống";
@@ -104,9 +105,10 @@
             // 
             // btn_dsPhong
             // 
-            this.btn_dsPhong.Location = new System.Drawing.Point(622, 38);
+            this.btn_dsPhong.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_dsPhong.Location = new System.Drawing.Point(631, 38);
             this.btn_dsPhong.Name = "btn_dsPhong";
-            this.btn_dsPhong.Size = new System.Drawing.Size(72, 31);
+            this.btn_dsPhong.Size = new System.Drawing.Size(81, 31);
             this.btn_dsPhong.TabIndex = 1;
             this.btn_dsPhong.Text = "Danh sách";
             this.btn_dsPhong.UseVisualStyleBackColor = true;
@@ -115,9 +117,10 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lv_ttDatPhong);
+            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(12, 174);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(604, 212);
+            this.groupBox2.Size = new System.Drawing.Size(613, 212);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tình Trạng Đặt Phòng";
@@ -142,25 +145,25 @@
             // tenphong
             // 
             this.tenphong.Text = "Tên Phòng";
-            this.tenphong.Width = 120;
+            this.tenphong.Width = 90;
             // 
             // tenkh
             // 
             this.tenkh.Text = "Tên Khách Hàng";
             this.tenkh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tenkh.Width = 150;
+            this.tenkh.Width = 140;
             // 
             // ngaybd
             // 
             this.ngaybd.Text = "Ngày Bắt Đầu";
             this.ngaybd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ngaybd.Width = 100;
+            this.ngaybd.Width = 120;
             // 
             // ngaykt
             // 
             this.ngaykt.Text = "Ngày Kết Thúc";
             this.ngaykt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ngaykt.Width = 100;
+            this.ngaykt.Width = 120;
             // 
             // tongtien
             // 
@@ -169,9 +172,10 @@
             // 
             // btn_DatPhong
             // 
-            this.btn_DatPhong.Location = new System.Drawing.Point(622, 96);
+            this.btn_DatPhong.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_DatPhong.Location = new System.Drawing.Point(631, 96);
             this.btn_DatPhong.Name = "btn_DatPhong";
-            this.btn_DatPhong.Size = new System.Drawing.Size(72, 31);
+            this.btn_DatPhong.Size = new System.Drawing.Size(81, 31);
             this.btn_DatPhong.TabIndex = 3;
             this.btn_DatPhong.Text = "Đặt Phòng";
             this.btn_DatPhong.UseVisualStyleBackColor = true;

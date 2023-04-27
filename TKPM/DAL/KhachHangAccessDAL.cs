@@ -74,6 +74,18 @@ namespace DAL
         public string ThemKhachHangDAL(KhachHang kh)
         {
             Connection();
+            SqlCommand cmd = new SqlCommand("sp_CheckCMNDKhachHang");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@cmnd", SqlDbType.NVarChar).Value = kh.CMND;
+            cmd.Connection = connect;
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                return "existed";
+            }
+            dr.Close();
+
+            Connection();
             kh.MaKH = PhatSinhMaKH();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
