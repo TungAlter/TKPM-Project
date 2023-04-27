@@ -81,7 +81,6 @@ CREATE TABLE NHANVIEN (
  TenNV Nvarchar(20) not null,
  CMND Nvarchar(20) not null,
  DiaChi Nvarchar(50) not null,
- MaTK Nvarchar(12) not null
 )
 
 CREATE TABLE KHACHHANG(
@@ -92,30 +91,7 @@ CREATE TABLE KHACHHANG(
   DiaChi Nvarchar(50) not null
 )
 
-CREATE TABLE DOANKHACH (
- MaDoan nvarchar(12) PRIMARY KEY,
- TenDoan nvarchar(20),
- TruongDoan nvarchar(12),
- SoNguoi int
-)
-CREATE TABLE TOURDULICH(
-    MaTour Nvarchar(12) primary key,
-    TenTour Nvarchar(20) not null,
-    MoTa Nvarchar(50) not null,
-    ThoiLuongTour Nvarchar(20) not null,
-    SDTDoiTac Nvarchar(20) not null
-)
-
-CREATE TABLE DangKyTour(
- MaKH Nvarchar(12) primary key,
- MaTour Nvarchar(12) not null,
- NgayDangKy date not null,
- YeuCau Nvarchar(50),
- SoNguoi int not null
-)
-
 CREATE TABLE LICHSUDUNGDV (
- MaKH nvarchar(12),
  MaPhieuThue nvarchar(12),
  MaDV nvarchar(12),
  ThoiGianSuDung date,
@@ -134,18 +110,15 @@ ALTER TABLE PHIEUTHUEPHONG ADD CONSTRAINT fk_ThuePhong_KhachHang FOREIGN KEY (Ma
 ALTER TABLE DANGKYDV ADD CONSTRAINT fk_DKDV_ThuePhong FOREIGN KEY (MaPhieuPhong) REFERENCES PHIEUTHUEPHONG(MaPhieuThue)
 ALTER TABLE DANGKYDV ADD CONSTRAINT fk_DKDV_DV FOREIGN KEY (MaDichVu) REFERENCES DICHVU(MaDV)
 
-ALTER TABLE LICHSUDUNGDV ADD CONSTRAINT fk_LichSDDV_KhachHang FOREIGN KEY (MaKH) REFERENCES KHACHHANG(MaKH)
 ALTER TABLE LICHSUDUNGDV ADD CONSTRAINT fk_LichSDDV_DKDV FOREIGN KEY (MaPhieuThue, MaDV) REFERENCES DANGKYDV(MaPhieuPhong,MaDichVu)
 
-ALTER TABLE NHANVIEN ADD CONSTRAINT fk_nhanvien_account FOREIGN KEY (MaTK) REFERENCES ACCOUNT(MaTK)
-
-ALTER TABLE DOANKHACH ADD CONSTRAINT fk_doankhach_khachhang FOREIGN KEY (TruongDoan) REFERENCES KHACHHANG(MaKH)
-
-ALTER TABLE DangKyTour ADD CONSTRAINT fk_dangkytour_khachhang FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH)
-ALTER TABLE DangKyTour ADD CONSTRAINT fk_dangkytour_tourdulich FOREIGN KEY (MaTour) REFERENCES TOURDULICH(MaTour)
+ALTER TABLE ACCOUNT ADD CONSTRAINT fk_account_nhanvien FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV)
 
 ALTER TABLE HOADON ADD CONSTRAINT fk_hoadon_nhanvien FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV)
 ALTER TABLE HOADON ADD CONSTRAINT fk_hoadon_thuephong FOREIGN KEY (PhieuThuePhong) REFERENCES PHIEUTHUEPHONG(MaPhieuThue)
+
+INSERT INTO NHANVIEN( MaNV,TenNV,CMND,DiaChi) VALUES (N'NV01', N'Gam',N'18203',N'hcm')
+INSERT INTO NHANVIEN( MaNV,TenNV,CMND,DiaChi) VALUES (N'TK02', N'SE',N'18202',N'hcm')
 
 INSERT INTO ACCOUNT ( MaTK,LoaiTK,MaNV,Usrname,Pwd) VALUES (N'TK01', N'AD',N'NV01',N'admin',N'admin')
 INSERT INTO ACCOUNT ( MaTK,LoaiTK,MaNV,Usrname,Pwd) VALUES (N'TK02', N'LT',N'NV02',N'duy',N'123')
@@ -154,9 +127,9 @@ INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP01'
 INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP02',N'Phòng Đôi',20,0)
 INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP03',N'Phòng VIP',30,1)
 
-INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai) VALUES (N'P101',N'Phòng 101','Single',200000,3,N'Bảo trì',1)
-INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai) VALUES (N'P102',N'Phòng 102','Couple',300000,3,N'Chưa dọn',1)
-INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai) VALUES (N'P103',N'Phòng 103','VIP',2000000,6,N'Đã dọn',0)
+INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P101',N'Phòng 101',N'LP01',200000,3,N'Bảo trì',1)
+INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P102',N'Phòng 102',N'LP02',300000,3,N'Chưa dọn',1)
+INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P103',N'Phòng 103',N'LP03',2000000,6,N'Đã dọn',0)
 
 INSERT INTO KHACHHANG(MaKH,TenKH,NgaySinh,CMND,DiaChi) VALUES (N'KH01',N'Duy','1999-03-20',N'123456',N'20 Ngo Quyen')
 create procedure sp_Login
