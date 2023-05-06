@@ -194,6 +194,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDatPhong";
             this.Text = "frmDatPhong";
+            this.Load += new System.EventHandler(this.frmDatPhong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);

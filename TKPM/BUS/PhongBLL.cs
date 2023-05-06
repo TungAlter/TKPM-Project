@@ -15,5 +15,10 @@ namespace BUS
         {
             return Room.Get_All_Phong();
         }
+
+        public string Lay_Ten_Phong(string key)
+        {
+            return "";
+        }
     }
 }

@@ -29,12 +29,12 @@ namespace GUI
             lb_Tenph.Text = frmDatPhong.Tenphong;
             lb_Loaiph.Text = frmDatPhong.Loaiphong;
             lb_Giaph.Text = frmDatPhong.Giaphong;
-            lb_NgayBD.Text = DateTime.Now.ToString("dd-MMM-yyyy");
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lb_NgayBD.Text = DateTime.Now.ToString("dd-MMM-yyyy");
+            //lb_NgayBD.Text = DateTime.Now.ToString("dd-MMM-yyyy");
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
@@ -57,13 +57,13 @@ namespace GUI
             PhieuDatPhong pd = new PhieuDatPhong();
             pd.MaKH = lb_Makh.Text.ToString();
             pd.MaPhongThue = lb_Tenph.Text.ToString();
-            pd.NgayBD = lb_NgayBD.Text.ToString();
+            pd.NgayBD = Ngaybd.Value.ToString("yyyy-MM-dd");
             pd.NgayKT = Ngaykt.Value.ToString("yyyy-MM-dd");
-            string temp1 = pd.NgayBD + " 00:00:00";
-            string temp2 = pd.NgayKT + " 00:00:00";
-            DateTime ngaybd = DateTime.ParseExact(temp1, "yyyy-MM-dd HH:mm:ss,fff",
+            string temp1 = pd.NgayBD + " 12:00:00";
+            string temp2 = pd.NgayKT + " 12:00:00";
+            DateTime ngaybd = DateTime.ParseExact(temp1, "yyyy-MM-dd HH:mm:ss",
                                        System.Globalization.CultureInfo.InvariantCulture);
-            DateTime ngaykt = DateTime.ParseExact(temp2, "yyyy-MM-dd HH:mm:ss,fff",
+            DateTime ngaykt = DateTime.ParseExact(temp2, "yyyy-MM-dd HH:mm:ss",
                            System.Globalization.CultureInfo.InvariantCulture);
             int songay = (ngaykt - ngaybd).Days;
             int tongtien = songay * Convert.ToInt32(this.lb_Giaph.Text);
@@ -76,6 +76,7 @@ namespace GUI
             } else if (res == 1 )
             {
                 MessageBox.Show("Thành Công !!");
+                this.Close();
             }
         }
     }

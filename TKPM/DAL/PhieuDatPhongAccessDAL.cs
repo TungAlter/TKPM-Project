@@ -75,10 +75,14 @@ namespace DAL
         }
 
         public string ThemPhieuDatPhongDAL( PhieuDatPhong pd) {
+            PhongAccessDAL ph = new PhongAccessDAL();
+            string temp = ph.LayMaPhong(pd.MaPhongThue);
+            pd.MaPhongThue = temp;
+            pd.MaPhieu = AutoGenerate("PT");
             Connection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "INSERT INTO PHIEUDATPHONG VALUES (N'" + pd.MaPhieu + "', N'" + pd.MaKH + "',N'" + pd.MaPhongThue + "',N'" + pd.NgayBD + "',N'" + pd.NgayKT +"',N'" + pd.TongTien + "')";
+            command.CommandText = "INSERT INTO PHIEUTHUEPHONG VALUES (N'" + pd.MaPhieu + "', N'" + pd.MaKH + "',N'" + pd.MaPhongThue + "',N'" + pd.NgayBD + "',N'" + pd.NgayKT +"',N'" + pd.TongTien + "')";
             command.Connection = connect;
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
@@ -88,6 +92,7 @@ namespace DAL
             }
             else
             {
+                ph.UpdateTrangThaiPhong(pd.MaPhongThue, "1");
                 reader.Close();
                 return "yes";
             }

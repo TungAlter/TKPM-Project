@@ -159,6 +159,9 @@ INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai) VALUES (
 INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai) VALUES (N'P103',N'Phòng 103','VIP',2000000,6,N'Đã dọn',0)
 truncate table PHONG
 INSERT INTO KHACHHANG(MaKH,TenKH,NgaySinh,CMND,DiaChi) VALUES (N'KH01',N'Duy','1999-03-20',N'123456',N'20 Ngo Quyen')
+insert into PHIEUTHUEPHONG VALUES(N'123',N'KH89',N'P102','2023-05-05','2023-06-06',20000)
+select ph.TenPhong from PHONG ph where ph.MaPhong=N'P102'
+delete from PHIEUTHUEPHONG where MaKH=N'KH89'
 create procedure sp_Login
 (
  @userid nvarchar(20),

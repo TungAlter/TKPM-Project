@@ -44,7 +44,22 @@ namespace DAL
             reader.Close();
             return Rooms;
         }
-
+        public string LayMaPhong(string key)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select* from PHONG where TenPhong=N'" + key + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            string maph = "";
+            while (reader.Read())
+            {
+                maph = reader.GetString(0);
+            }
+            reader.Close();
+            return maph;
+        }
         public string UpdateTrangThaiPhong(string ma_phong, string trangthai)
         {
             Connection();

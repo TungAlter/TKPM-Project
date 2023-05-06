@@ -11,13 +11,12 @@ namespace BUS
     public class PhieuDatPhongBLL
     {
         PhieuDatPhongAccessDAL pdp = new PhieuDatPhongAccessDAL();
-        PhongAccessDAL phong = new PhongAccessDAL();
         public int ThemPhieuDatPhongBLL (PhieuDatPhong pd)
         {
             string res = pdp.ThemPhieuDatPhongDAL(pd);
             if (res == "yes")
             {
-                phong.UpdateTrangThaiPhong(pd.MaPhongThue, "0");
+            
                 return 1;
             }
             else if (res == "no")
@@ -25,6 +24,11 @@ namespace BUS
                 return 0;
             }
             return 0;
+        }
+
+        public List<PhieuDatPhong> Lay_Toan_Bo_PhieuDatPhong()
+        {
+            return pdp.Get_All_PhieuDP();
         }
     }
 }

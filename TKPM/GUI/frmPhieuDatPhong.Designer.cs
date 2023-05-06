@@ -42,7 +42,6 @@
             this.lb_7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.lb_NgayBD = new System.Windows.Forms.Label();
             this.Ngaykt = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.btn_XacNhan = new System.Windows.Forms.Button();
             this.btn_Huy = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Ngaybd = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -174,8 +174,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.Ngaybd);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.lb_NgayBD);
             this.groupBox2.Controls.Add(this.Ngaykt);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
@@ -200,15 +200,6 @@
             this.label4.Size = new System.Drawing.Size(61, 15);
             this.label4.TabIndex = 11;
             this.label4.Text = "VNĐ/Đêm";
-            // 
-            // lb_NgayBD
-            // 
-            this.lb_NgayBD.AutoSize = true;
-            this.lb_NgayBD.Location = new System.Drawing.Point(91, 75);
-            this.lb_NgayBD.Name = "lb_NgayBD";
-            this.lb_NgayBD.Size = new System.Drawing.Size(92, 15);
-            this.lb_NgayBD.TabIndex = 10;
-            this.lb_NgayBD.Text = "?????????????????";
             // 
             // Ngaykt
             // 
@@ -325,6 +316,14 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // Ngaybd
+            // 
+            this.Ngaybd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Ngaybd.Location = new System.Drawing.Point(91, 67);
+            this.Ngaybd.Name = "Ngaybd";
+            this.Ngaybd.Size = new System.Drawing.Size(121, 23);
+            this.Ngaybd.TabIndex = 12;
+            // 
             // frmPhieuDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -361,7 +360,6 @@
         private Label label9;
         private Label label8;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Label lb_NgayBD;
         private GroupBox groupBox3;
         private Button btn_ChonKH;
         private Label lb_diachi;
@@ -376,5 +374,6 @@
         private Button btn_Huy;
         private System.Windows.Forms.Timer timer1;
         private Label label4;
+        private DateTimePicker Ngaybd;
     }
 }
