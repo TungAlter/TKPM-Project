@@ -47,7 +47,7 @@ namespace DAL
             Connection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "select* from PHIEUDATPHONG";
+            command.CommandText = "select* from PHIEUTHUEPHONG";
             command.Connection = connect;
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -61,13 +61,14 @@ namespace DAL
                 string ngaybd = dt1.ToString("dd/M/yyyy", CultureInfo.InvariantCulture);
                 DateTime dt2 = reader.GetDateTime(4);
                 string ngaykt = dt2.ToString("dd/M/yyyy", CultureInfo.InvariantCulture);
-                string tongtien = reader.GetString(5);
+                int tongtien = reader.GetInt32(5);
                 PhieuDatPhong pd = new PhieuDatPhong();
                 pd.MaPhieu = maphieu;
                 pd.MaKH = makh;
                 pd.MaPhongThue = maphong;
                 pd.NgayBD = ngaybd;
                 pd.NgayKT = ngaykt;
+                pd.TongTien = tongtien.ToString();
                 dsPD.Add(pd);
             }
             reader.Close();

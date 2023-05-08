@@ -18,7 +18,7 @@ namespace BUS
 
         public string Lay_Ten_Phong(string key)
         {
-            return "";
+            return Room.Lay_Ten_Phong(key);
         }
     }
 }

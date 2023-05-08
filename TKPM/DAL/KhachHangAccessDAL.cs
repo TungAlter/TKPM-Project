@@ -150,5 +150,22 @@ namespace DAL
             reader.Close();
             return dsKH;
         }
+
+        public string Lay_Ten_KH(string makh)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select TenKH from KHACHHANG where MaKH=N'" + makh + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            string tenkh = "";
+            while (reader.Read())
+            {
+                tenkh = reader.GetString(0);
+            }
+            reader.Close();
+            return tenkh;
+        }
     }
 }

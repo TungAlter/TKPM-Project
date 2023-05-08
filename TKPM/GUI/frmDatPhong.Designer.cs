@@ -51,7 +51,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lv_dsPhongTrong);
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 1);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(613, 167);
@@ -105,7 +105,7 @@
             // 
             // btn_dsPhong
             // 
-            this.btn_dsPhong.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_dsPhong.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_dsPhong.Location = new System.Drawing.Point(631, 38);
             this.btn_dsPhong.Name = "btn_dsPhong";
             this.btn_dsPhong.Size = new System.Drawing.Size(81, 31);
@@ -117,7 +117,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lv_ttDatPhong);
-            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(12, 174);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(613, 212);
@@ -172,7 +172,7 @@
             // 
             // btn_DatPhong
             // 
-            this.btn_DatPhong.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_DatPhong.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_DatPhong.Location = new System.Drawing.Point(631, 96);
             this.btn_DatPhong.Name = "btn_DatPhong";
             this.btn_DatPhong.Size = new System.Drawing.Size(81, 31);

@@ -53,5 +53,10 @@ namespace BUS
         {
             return khachhang.SearchKhachHangDAL(key);
         }
+
+        public string LayTenKH(string makh)
+        {
+            return khachhang.Lay_Ten_KH(makh);
+        }
     }
 }

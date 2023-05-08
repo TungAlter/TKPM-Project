@@ -19,7 +19,7 @@ namespace DAL
             Connection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "select* from PHONG";
+            command.CommandText = "select* from PHONG Where TinhTrang=0";
             command.Connection = connect;
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -65,7 +65,7 @@ namespace DAL
             Connection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "UPDATE PHONG SET TinhTrang='" + trangthai + "' WHERE MaPhong=N'" + ma_phong + "'";
+            command.CommandText = "UPDATE PHONG SET TinhTrang=" + trangthai + " WHERE MaPhong=N'" + ma_phong + "'";
             command.Connection = connect;
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
@@ -78,6 +78,23 @@ namespace DAL
                 reader.Close();
                 return "yes";
             }
+        }
+
+        public string Lay_Ten_Phong(string key)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select TenPhong from PHONG where MaPhong=N'" + key + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            string tenph = "";
+            while (reader.Read())
+            {
+               tenph = reader.GetString(0);
+            }
+            reader.Close();
+            return tenph;
         }
     }
 }
