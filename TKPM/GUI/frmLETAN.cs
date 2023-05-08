@@ -49,5 +49,10 @@ namespace GUI
         {
             OpenChildForm(new frmQLKhachHang());
         }
+
+        private void btn_HoaDon_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmHoaDon());
+        }
     }
 }

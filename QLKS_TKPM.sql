@@ -198,3 +198,12 @@ begin
 	select * from PHIEUTHUEPHONG where MaPhieuThue=@maphieu
 end
 
+create procedure sp_MaHoaDon
+(
+ @mahd nvarchar(20)
+)
+as 
+begin
+	select * from HOADON where MaHD=@mahd
+end
+

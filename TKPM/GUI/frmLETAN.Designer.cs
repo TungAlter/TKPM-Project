@@ -39,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_HoaDon = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.Header_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,6 +56,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.panel2.Controls.Add(this.btn_HoaDon);
             this.panel2.Controls.Add(this.btn_QLKH);
             this.panel2.Controls.Add(this.btn_DatPhong);
             this.panel2.Location = new System.Drawing.Point(1, 120);
@@ -170,6 +172,20 @@
             this.label3.Text = "WELCOM LE TAN !";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btn_HoaDon
+            // 
+            this.btn_HoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.btn_HoaDon.FlatAppearance.BorderSize = 0;
+            this.btn_HoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoaDon.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_HoaDon.Location = new System.Drawing.Point(16, 114);
+            this.btn_HoaDon.Name = "btn_HoaDon";
+            this.btn_HoaDon.Size = new System.Drawing.Size(153, 51);
+            this.btn_HoaDon.TabIndex = 3;
+            this.btn_HoaDon.Text = "    Hóa Đơn";
+            this.btn_HoaDon.UseVisualStyleBackColor = false;
+            this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
+            // 
             // frmLETAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -206,5 +222,6 @@
         private PictureBox pictureBox1;
         private Panel panel1;
         private Label label3;
+        private Button btn_HoaDon;
     }
 }

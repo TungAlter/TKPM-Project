@@ -91,7 +91,7 @@ namespace DAL
             string tenph = "";
             while (reader.Read())
             {
-               tenph = reader.GetString(0);
+                tenph = reader.GetString(0);
             }
             reader.Close();
             return tenph;

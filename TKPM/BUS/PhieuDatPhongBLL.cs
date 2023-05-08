@@ -30,5 +30,25 @@ namespace BUS
         {
             return pdp.Get_All_PhieuDP();
         }
+
+        public string LayMaPhieuBLL(string tenphong)
+        {
+            PhongBLL ph = new PhongBLL();
+            return pdp.LayMaPhieuDAL(ph.Lay_Ma_Phong(tenphong));
+        }
+
+        public int CapNhatPhieuDatPhongBLL(string key)
+        {
+            string res = pdp.CapNhatTrangThaiPhieuDatPhongDAL(key);
+            if (res == "yes")
+            {
+                return 1;
+            }
+            else if (res == "no")
+            {
+                return 0;
+            }
+            return 0;
+        }
     }
 }

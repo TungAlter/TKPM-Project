@@ -86,5 +86,37 @@ namespace GUI
             }
             lv_ttDatPhong.EndUpdate();
         }
+
+        private void btn_ThanhToan_Click(object sender, EventArgs e)
+        {
+            if (lv_ttDatPhong.SelectedItems.Count == 1)
+            {
+                HoaDon hd = new HoaDon();
+                HoaDonBLL hdbll = new HoaDonBLL();
+                PhongBLL ph = new PhongBLL();
+                PhieuDatPhongBLL pdp = new PhieuDatPhongBLL();
+                //.Items.Clear();
+                ListViewItem lvi = lv_ttDatPhong.SelectedItems[0];
+                string tenphong = lvi.SubItems[0].Text.ToString();
+                hd.MaPhieu = pdp.LayMaPhieuBLL(tenphong);
+
+                hd.TongTien = lvi.SubItems[4].Text.ToString();
+                int res = hdbll.ThemHoaDon(hd);
+                if(res == 1)
+                {
+                    pdp.CapNhatPhieuDatPhongBLL(hd.MaPhieu);
+                    ph.CapNhatTrangThaiPhongBLL(ph.Lay_Ma_Phong(tenphong), "0");
+                    MessageBox.Show("Thanh toán Thành Công !!!");
+                }
+                else
+                {
+                    MessageBox.Show("Thanh toán thất bại !!!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chọn 1 đối tượng để thanh toán !!");
+            }
+        }
     }
 }

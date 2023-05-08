@@ -75,3 +75,5 @@ C:\Users\admin\Documents\GitHub\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\r
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmQLKhachHang.resources
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmThemKH.resources
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmXemDSKH.resources
+E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmHoaDon.resources
+E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmChiTietHD.resources

@@ -20,5 +20,15 @@ namespace BUS
         {
             return Room.Lay_Ten_Phong(key);
         }
+
+        public string Lay_Ma_Phong(string key)
+        {
+            return Room.LayMaPhong(key);
+        }
+        
+        public string CapNhatTrangThaiPhongBLL(string maph, string trangthai)
+        {
+            return Room.UpdateTrangThaiPhong(maph, trangthai);
+        }
     }
 }

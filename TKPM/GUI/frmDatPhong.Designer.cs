@@ -44,6 +44,7 @@
             this.ngaykt = new System.Windows.Forms.ColumnHeader();
             this.tongtien = new System.Windows.Forms.ColumnHeader();
             this.btn_DatPhong = new System.Windows.Forms.Button();
+            this.btn_ThanhToan = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -181,12 +182,24 @@
             this.btn_DatPhong.UseVisualStyleBackColor = true;
             this.btn_DatPhong.Click += new System.EventHandler(this.btn_DatPhong_Click);
             // 
+            // btn_ThanhToan
+            // 
+            this.btn_ThanhToan.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_ThanhToan.Location = new System.Drawing.Point(631, 238);
+            this.btn_ThanhToan.Name = "btn_ThanhToan";
+            this.btn_ThanhToan.Size = new System.Drawing.Size(81, 50);
+            this.btn_ThanhToan.TabIndex = 4;
+            this.btn_ThanhToan.Text = "Thanh Toán";
+            this.btn_ThanhToan.UseVisualStyleBackColor = true;
+            this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
+            // 
             // frmDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.ClientSize = new System.Drawing.Size(715, 390);
+            this.Controls.Add(this.btn_ThanhToan);
             this.Controls.Add(this.btn_DatPhong);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btn_dsPhong);
@@ -219,5 +232,6 @@
         private ColumnHeader ngaykt;
         private ColumnHeader tongtien;
         private Button btn_DatPhong;
+        private Button btn_ThanhToan;
     }
 }

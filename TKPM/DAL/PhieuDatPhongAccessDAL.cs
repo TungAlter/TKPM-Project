@@ -47,7 +47,7 @@ namespace DAL
             Connection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "select* from PHIEUTHUEPHONG";
+            command.CommandText = "select* from PHIEUTHUEPHONG where TrangThai=0";
             command.Connection = connect;
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -83,7 +83,7 @@ namespace DAL
             Connection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "INSERT INTO PHIEUTHUEPHONG VALUES (N'" + pd.MaPhieu + "', N'" + pd.MaKH + "',N'" + pd.MaPhongThue + "',N'" + pd.NgayBD + "',N'" + pd.NgayKT +"',N'" + pd.TongTien + "')";
+            command.CommandText = "INSERT INTO PHIEUTHUEPHONG VALUES (N'" + pd.MaPhieu + "', N'" + pd.MaKH + "',N'" + pd.MaPhongThue + "',N'" + pd.NgayBD + "',N'" + pd.NgayKT +"',N'" + pd.TongTien +"',0"+ ")";
             command.Connection = connect;
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
@@ -94,6 +94,43 @@ namespace DAL
             else
             {
                 ph.UpdateTrangThaiPhong(pd.MaPhongThue, "1");
+                reader.Close();
+                return "yes";
+            }
+        }
+
+        public string LayMaPhieuDAL(string maphong)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select MaPhieuThue from PHIEUTHUEPHONG where MaPhongThue=N'" + maphong + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            string tenph = "";
+            while (reader.Read())
+            {
+                tenph = reader.GetString(0);
+            }
+            reader.Close();
+            return tenph;
+        }
+
+        public string CapNhatTrangThaiPhieuDatPhongDAL(string maphieu)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "UPDATE PHIEUTHUEPHONG SET TrangThai="+"1"+" WHERE MaPhieuThue=N'" + maphieu + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return "no";
+            }
+            else
+            {
                 reader.Close();
                 return "yes";
             }
