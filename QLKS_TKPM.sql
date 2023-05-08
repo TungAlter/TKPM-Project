@@ -157,11 +157,15 @@ INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP03'
 INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P104',N'Phòng 104','Single',200000,2,N'Đã dọn',1)
 INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai) VALUES (N'P102',N'Phòng 102','Couple',300000,4,N'Chưa dọn',1)
 INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai) VALUES (N'P103',N'Phòng 103','VIP',2000000,6,N'Đã dọn',0)
-truncate table PHONG
+
 INSERT INTO KHACHHANG(MaKH,TenKH,NgaySinh,CMND,DiaChi) VALUES (N'KH01',N'Duy','1999-03-20',N'123456',N'20 Ngo Quyen')
-insert into PHIEUTHUEPHONG VALUES(N'123',N'KH89',N'P102','2023-05-05','2023-06-06',20000)
-select ph.TenPhong from PHONG ph where ph.MaPhong=N'P102'
-delete from PHIEUTHUEPHONG where MaKH=N'KH89'
+
+INSERT INTO NHANVIEN VALUES (N'NV01', N'Nguyễn Quang', N'0563343', N'127 Phạm Văn Đồng, HCM', N'TK01')
+
+INSERT INTO SANPHAM VALUES (N'SP01', N'Coca Cola', 10000)
+INSERT INTO SANPHAM VALUES (N'SP02', N'Pepsi', 15000)
+INSERT INTO SANPHAM VALUES (N'SP03', N'Nước Suối', 8000)
+update PHONG set TinhTrang = 0,TrangThai =N'Đã Dọn' where MaPhong =N'P103'
 create procedure sp_Login
 (
  @userid nvarchar(20),

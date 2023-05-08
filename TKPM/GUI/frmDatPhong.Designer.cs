@@ -45,6 +45,7 @@
             this.tongtien = new System.Windows.Forms.ColumnHeader();
             this.btn_DatPhong = new System.Windows.Forms.Button();
             this.btn_ThanhToan = new System.Windows.Forms.Button();
+            this.btn_BanSP = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -185,7 +186,7 @@
             // btn_ThanhToan
             // 
             this.btn_ThanhToan.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_ThanhToan.Location = new System.Drawing.Point(631, 238);
+            this.btn_ThanhToan.Location = new System.Drawing.Point(631, 285);
             this.btn_ThanhToan.Name = "btn_ThanhToan";
             this.btn_ThanhToan.Size = new System.Drawing.Size(81, 50);
             this.btn_ThanhToan.TabIndex = 4;
@@ -193,12 +194,23 @@
             this.btn_ThanhToan.UseVisualStyleBackColor = true;
             this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
             // 
+            // btn_BanSP
+            // 
+            this.btn_BanSP.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_BanSP.Location = new System.Drawing.Point(631, 211);
+            this.btn_BanSP.Name = "btn_BanSP";
+            this.btn_BanSP.Size = new System.Drawing.Size(81, 50);
+            this.btn_BanSP.TabIndex = 5;
+            this.btn_BanSP.Text = "Mua Sản Phẩm";
+            this.btn_BanSP.UseVisualStyleBackColor = true;
+            // 
             // frmDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.ClientSize = new System.Drawing.Size(715, 390);
+            this.Controls.Add(this.btn_BanSP);
             this.Controls.Add(this.btn_ThanhToan);
             this.Controls.Add(this.btn_DatPhong);
             this.Controls.Add(this.groupBox2);
@@ -233,5 +245,6 @@
         private ColumnHeader tongtien;
         private Button btn_DatPhong;
         private Button btn_ThanhToan;
+        private Button btn_BanSP;
     }
 }
