@@ -36,7 +36,7 @@ namespace GUI
             }
             else if (res == 0)
             {
-                MessageBox.Show("Đéo ổn !!");
+                MessageBox.Show("Error !!");
             }
         }
 

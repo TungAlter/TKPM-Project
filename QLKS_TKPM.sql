@@ -28,7 +28,8 @@ CREATE TABLE PHIEUTHUEPHONG (
  MaPhongThue nvarchar(12),
  NgayBD date,
  NgayKT date,
- TongTien int
+ TongTien int,
+ TrangThai bit
 )
 
 CREATE TABLE HOADON (
@@ -148,15 +149,15 @@ ALTER TABLE HOADON ADD CONSTRAINT fk_hoadon_nhanvien FOREIGN KEY (MaNV) REFERENC
 ALTER TABLE HOADON ADD CONSTRAINT fk_hoadon_thuephong FOREIGN KEY (PhieuThuePhong) REFERENCES PHIEUTHUEPHONG(MaPhieuThue)
 
 INSERT INTO ACCOUNT ( MaTK,LoaiTK,MaNV,Usrname,Pwd) VALUES (N'TK01', N'AD',N'NV01',N'admin',N'admin')
-INSERT INTO ACCOUNT ( MaTK,LoaiTK,MaNV,Usrname,Pwd) VALUES (N'TK02', N'LT',N'NV02',N'duy',N'123')
+INSERT INTO ACCOUNT ( MaTK,LoaiTK,MaNV,Usrname,Pwd) VALUES (N'TK02', N'LT',N'NV02',N'letan',N'123')
 
 INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP01',N'Phòng Đơn',30,0)
 INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP02',N'Phòng Đôi',20,0)
 INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP03',N'Phòng VIP',30,1)
 
-INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P104',N'Phòng 104','Single',200000,2,N'Đã dọn',1)
-INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai) VALUES (N'P102',N'Phòng 102','Couple',300000,4,N'Chưa dọn',1)
-INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai) VALUES (N'P103',N'Phòng 103','VIP',2000000,6,N'Đã dọn',0)
+INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P104',N'Phòng 104','Single',200000,2,N'Đã dọn',0)
+INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P102',N'Phòng 102','Couple',300000,4,N'Chưa dọn',0)
+INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P103',N'Phòng 103','VIP',2000000,6,N'Đã dọn',0)
 
 INSERT INTO KHACHHANG(MaKH,TenKH,NgaySinh,CMND,DiaChi) VALUES (N'KH01',N'Duy','1999-03-20',N'123456',N'20 Ngo Quyen')
 
@@ -165,7 +166,7 @@ INSERT INTO NHANVIEN VALUES (N'NV01', N'Nguyễn Quang', N'0563343', N'127 Phạ
 INSERT INTO SANPHAM VALUES (N'SP01', N'Coca Cola', 10000)
 INSERT INTO SANPHAM VALUES (N'SP02', N'Pepsi', 15000)
 INSERT INTO SANPHAM VALUES (N'SP03', N'Nước Suối', 8000)
-update PHONG set TinhTrang = 0,TrangThai =N'Đã Dọn' where MaPhong =N'P103'
+
 create procedure sp_Login
 (
  @userid nvarchar(20),

@@ -59,7 +59,7 @@ namespace GUI
                 }
                 else if (res == 0)
                 {
-                    MessageBox.Show("Đéo ổn !!");
+                    MessageBox.Show("Thất bại !!");
                 }
             } 
             else
@@ -88,7 +88,7 @@ namespace GUI
             }
             else if (res == 0)
             {
-                MessageBox.Show("Đéo ổn !!");
+                MessageBox.Show("Thất bại !!");
             }
         }
 
