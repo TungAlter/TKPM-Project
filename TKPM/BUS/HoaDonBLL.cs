@@ -15,7 +15,10 @@ namespace BUS
         {
             return hoadon.Get_All_HoaDon();
         }
-
+        public List<ChiTietHoaDon> Lay_DS_ChiTietHD(string maphieu)
+        {
+            return hoadon.Chi_Tiet_Mua_SP(maphieu);
+        }
         public int ThemHoaDon(HoaDon hd)
         {
             hd.NgayTT = DateTime.Now.ToString("yyyy-MM-dd");

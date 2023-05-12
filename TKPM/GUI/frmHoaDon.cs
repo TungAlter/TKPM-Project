@@ -14,6 +14,8 @@ namespace GUI
 {
     public partial class frmHoaDon : Form
     {
+        public static string maphieu = "";
+        public static string ngaytt = "";
         public frmHoaDon()
         {
             InitializeComponent();
@@ -36,6 +38,22 @@ namespace GUI
                 lv_HoaDon.Items.Add(lvi);
             }
             lv_HoaDon.EndUpdate();
+        }
+
+        private void btn_ChiTietHD_Click(object sender, EventArgs e)
+        {
+            if(lv_HoaDon.SelectedItems.Count == 1)
+            {
+                ListViewItem lvi = lv_HoaDon.SelectedItems[0];
+                maphieu = lvi.SubItems[2].Text.ToString();
+                ngaytt = lvi.SubItems[4].Text.ToString();
+                frmChiTietHD cthd = new frmChiTietHD();
+                cthd.ShowDialog();
+            }
+             else
+            {
+                MessageBox.Show("Chọn 1 hóa đơn để xem chi tiết !!");
+            }
         }
     }
 }

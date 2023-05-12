@@ -13,6 +13,7 @@ namespace DAL
     public class HoaDonAccessDAL : DataAccessDAL
     {
         public List<HoaDon> dsHD = new List<HoaDon>();
+        public List<ChiTietHoaDon> dsCTHD = new List<ChiTietHoaDon>();
         public string Phat_Sinh_MaHD()
         {
             int flag = 0;
@@ -90,6 +91,34 @@ namespace DAL
                 reader.Close();
                 return "yes";
             }
+        }
+        
+        public List<ChiTietHoaDon> Chi_Tiet_Mua_SP(string maphieu)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select* from LICHSUMUASP ls join SANPHAM sp on ls.MaSanPham = sp.MaSP where ls.MaPhieuPhong=N'" + maphieu + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string phieu = reader.GetString(0);
+                string masp = reader.GetString(1);
+                int soluong = reader.GetInt32(2);
+                DateTime ngaymua = reader.GetDateTime(3);
+                int thanhtien = reader.GetInt32(4);
+                string tensp = reader.GetString(6);
+                int dongia = reader.GetInt32(7);
+                ChiTietHoaDon hd = new ChiTietHoaDon();
+                hd.noidung = tensp;
+                hd.soluong = soluong.ToString();
+                hd.dongia = dongia.ToString();
+                hd.thanhtien = thanhtien.ToString();
+                dsCTHD.Add(hd);
+            }
+            reader.Close();
+            return dsCTHD;
         }
     }
 }

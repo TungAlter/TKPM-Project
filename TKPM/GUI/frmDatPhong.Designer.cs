@@ -203,6 +203,7 @@
             this.btn_BanSP.TabIndex = 5;
             this.btn_BanSP.Text = "Mua Sản Phẩm";
             this.btn_BanSP.UseVisualStyleBackColor = true;
+            this.btn_BanSP.Click += new System.EventHandler(this.btn_BanSP_Click);
             // 
             // frmDatPhong
             // 

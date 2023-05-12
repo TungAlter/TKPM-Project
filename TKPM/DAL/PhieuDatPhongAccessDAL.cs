@@ -104,7 +104,7 @@ namespace DAL
             Connection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "select MaPhieuThue from PHIEUTHUEPHONG where MaPhongThue=N'" + maphong + "'";
+            command.CommandText = "select MaPhieuThue from PHIEUTHUEPHONG where TrangThai=0 and MaPhongThue=N'" + maphong + "'";
             command.Connection = connect;
             SqlDataReader reader = command.ExecuteReader();
             string tenph = "";

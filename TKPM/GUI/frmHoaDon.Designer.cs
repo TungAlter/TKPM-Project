@@ -94,6 +94,7 @@
             this.btn_ChiTietHD.TabIndex = 1;
             this.btn_ChiTietHD.Text = "Xem Chi Tiết";
             this.btn_ChiTietHD.UseVisualStyleBackColor = true;
+            this.btn_ChiTietHD.Click += new System.EventHandler(this.btn_ChiTietHD_Click);
             // 
             // textBox1
             // 

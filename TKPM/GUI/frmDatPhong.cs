@@ -17,6 +17,7 @@ namespace GUI
         public static string Tenphong = "";
         public static string Loaiphong = "";
         public static string Giaphong = "";
+        public static string maphieu = "";
         public frmDatPhong()
         {
             InitializeComponent();
@@ -102,7 +103,7 @@ namespace GUI
 
                 hd.TongTien = lvi.SubItems[4].Text.ToString();
                 int res = hdbll.ThemHoaDon(hd);
-                if(res == 1)
+                if (res == 1)
                 {
                     pdp.CapNhatPhieuDatPhongBLL(hd.MaPhieu);
                     ph.CapNhatTrangThaiPhongBLL(ph.Lay_Ma_Phong(tenphong), "0");
@@ -116,6 +117,23 @@ namespace GUI
             else
             {
                 MessageBox.Show("Chọn 1 đối tượng để thanh toán !!");
+            }
+        }
+
+        private void btn_BanSP_Click(object sender, EventArgs e)
+        {
+            PhieuDatPhongBLL pdp = new PhieuDatPhongBLL();
+            if (lv_ttDatPhong.SelectedItems.Count == 1)
+            {
+                ListViewItem lvi = lv_ttDatPhong.SelectedItems[0];
+                string tenphong = lvi.SubItems[0].Text.ToString();
+                maphieu = pdp.LayMaPhieuBLL(tenphong);
+                frmBanSanPham frmBanSanPham = new frmBanSanPham();
+                frmBanSanPham.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Chọn một phiếu đặt phòng !!");
             }
         }
     }
