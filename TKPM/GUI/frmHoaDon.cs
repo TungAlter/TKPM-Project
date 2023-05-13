@@ -57,5 +57,10 @@ namespace GUI
                 MessageBox.Show("Chọn 1 hóa đơn để xem chi tiết !!");
             }
         }
+
+        private void btn_UpdateHD_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

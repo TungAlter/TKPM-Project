@@ -87,6 +87,7 @@
             this.btn_updateKH.TabIndex = 3;
             this.btn_updateKH.Text = "      Chỉnh sửa";
             this.btn_updateKH.UseVisualStyleBackColor = true;
+            this.btn_updateKH.Click += new System.EventHandler(this.btn_updateKH_Click);
             // 
             // lv_KhachHang
             // 

@@ -131,6 +131,7 @@
             this.btn_UpdateHD.TabIndex = 4;
             this.btn_UpdateHD.Text = "       Chỉnh sửa";
             this.btn_UpdateHD.UseVisualStyleBackColor = true;
+            this.btn_UpdateHD.Click += new System.EventHandler(this.btn_UpdateHD_Click);
             // 
             // frmHoaDon
             // 

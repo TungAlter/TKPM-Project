@@ -35,8 +35,14 @@ namespace BUS
             return 0;
         }
 
-        public int UpdateKhachHangBLL(KhachHang kh)
+        public int UpdateKhachHangBLL(string makh, string tenkh, string birth, string cmnd, string diachi)
         {
+            KhachHang kh = new KhachHang();
+            kh.MaKH = makh;
+            kh.NgaySinh = birth;
+            kh.DiaChi = diachi;
+            kh.CMND = cmnd;
+            kh.TenKH = tenkh;
             string res = khachhang.UpdateKhachHangDAL(kh);
             if (res == "yes")
             {

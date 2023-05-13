@@ -9,11 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace GUI
 {
     public partial class frmQLKhachHang : Form
     {
+        public static string tenkh = "";
+        public static string makh = "";
+        public static string cmnd = "";
+        public static string birth = "";
+        public static string diachi = "";
         public frmQLKhachHang()
         {
             InitializeComponent();
@@ -42,6 +48,25 @@ namespace GUI
                 lv_KhachHang.Items.Add(lvi);
             }
             lv_KhachHang.EndUpdate();
+        }
+
+        private void btn_updateKH_Click(object sender, EventArgs e)
+        {
+            if (lv_KhachHang.SelectedItems.Count != 1)
+            {
+                MessageBox.Show("Chọn 1 Khách hàng để Chỉnh sửa !!");
+            }
+            else
+            {
+                ListViewItem lvi = lv_KhachHang.SelectedItems[0];
+                makh = lvi.SubItems[0].Text.ToString();
+                tenkh = lvi.SubItems[1].Text.ToString();
+                birth = lvi.SubItems[2].Text.ToString();
+                cmnd = lvi.SubItems[3].Text.ToString();
+                diachi = lvi.SubItems[4].Text.ToString();
+                frmUpdateKH updateKH = new frmUpdateKH();
+                updateKH.ShowDialog();
+            }
         }
     }
 }
