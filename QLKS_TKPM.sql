@@ -18,8 +18,8 @@ CREATE TABLE PHONG(
  LoaiPhong nvarchar(12),
  GiaThue int,
  SoNguoi int,
- TrangThai nvarchar(12),
- TinhTrang bit
+ TinhTrang nvarchar(12),
+ TrangThai bit
 )
 
 CREATE TABLE PHIEUTHUEPHONG (
@@ -44,7 +44,6 @@ CREATE TABLE DANGKYDV (
  MaPhieuPhong nvarchar(12) NOT NULL,
  MaDichVu nvarchar (12) NOT NULL,
  NgayDangKy date,
- SoLuong int,
  PRIMARY KEY(MaPhieuPhong,MaDichVu)
 )
 
@@ -52,13 +51,13 @@ CREATE TABLE DICHVU(
  MaDV nvarchar(12) PRIMARY KEY NOT NULL,
  TenDV nvarchar(12),
  DonGia int,
- SoNguoiSD int
 )
 
 CREATE TABLE SANPHAM(
  MaSP nvarchar(12) PRIMARY KEY NOT NULL,
  TenSP nvarchar(12),
- DonGiaSP int
+ DonGiaSP int,
+ SoLuongTon int
 )
 
 CREATE TABLE LICHSUMUASP (
@@ -93,41 +92,17 @@ CREATE TABLE KHACHHANG(
   DiaChi Nvarchar(50) not null
 )
 
-CREATE TABLE DOANKHACH (
- MaDoan nvarchar(12) PRIMARY KEY,
- TenDoan nvarchar(20),
- TruongDoan nvarchar(12),
- SoNguoi int
-)
-CREATE TABLE TOURDULICH(
-    MaTour Nvarchar(12) primary key,
-    TenTour Nvarchar(20) not null,
-    MoTa Nvarchar(50) not null,
-    ThoiLuongTour Nvarchar(20) not null,
-    SDTDoiTac Nvarchar(20) not null
-)
-
-CREATE TABLE DangKyTour(
- MaKH Nvarchar(12) primary key,
- MaTour Nvarchar(12) not null,
- NgayDangKy date not null,
- YeuCau Nvarchar(50),
- SoNguoi int not null
-)
-
 CREATE TABLE LICHSUDUNGDV (
- MaKH nvarchar(12),
  MaPhieuThue nvarchar(12),
  MaDV nvarchar(12),
  ThoiGianSuDung date,
- CaSuDung time
- PRIMARY KEY (MaKH,MaPhieuThue,MaDV)
+ PRIMARY KEY (MaPhieuThue,MaDV)
 )
 
 ALTER TABLE PHONG ADD CONSTRAINT fk_phong_loaiphong FOREIGN KEY (LoaiPhong) REFERENCES LOAIPHONG(MaLoaiPhong)
 
 ALTER TABLE LICHSUMUASP ADD CONSTRAINT fk_MuaSP_SanPham FOREIGN KEY (MaSanPham) REFERENCES SANPHAM(MaSP)
-ALTER TABLE LICHSUMUASP ADD CONSTRAINT fk_MuaSP_ThuePhong FOREIGN KEY (MaPhieuPhong) REFERENCES PhIEUTHUEPHONG(MaPhieuThue)
+ALTER TABLE LICHSUMUASP ADD CONSTRAINT fk_MuaSP_ThuePhong FOREIGN KEY (MaPhieuPhong) REFERENCES PHIEUTHUEPHONG(MaPhieuThue)
 
 ALTER TABLE PHIEUTHUEPHONG ADD CONSTRAINT fk_ThuePhong_phong FOREIGN KEY (MaPhongThue) REFERENCES PHONG(MaPhong)
 ALTER TABLE PHIEUTHUEPHONG ADD CONSTRAINT fk_ThuePhong_KhachHang FOREIGN KEY (MaKH) REFERENCES KHACHHANG(MaKH)
@@ -135,15 +110,9 @@ ALTER TABLE PHIEUTHUEPHONG ADD CONSTRAINT fk_ThuePhong_KhachHang FOREIGN KEY (Ma
 ALTER TABLE DANGKYDV ADD CONSTRAINT fk_DKDV_ThuePhong FOREIGN KEY (MaPhieuPhong) REFERENCES PHIEUTHUEPHONG(MaPhieuThue)
 ALTER TABLE DANGKYDV ADD CONSTRAINT fk_DKDV_DV FOREIGN KEY (MaDichVu) REFERENCES DICHVU(MaDV)
 
-ALTER TABLE LICHSUDUNGDV ADD CONSTRAINT fk_LichSDDV_KhachHang FOREIGN KEY (MaKH) REFERENCES KHACHHANG(MaKH)
 ALTER TABLE LICHSUDUNGDV ADD CONSTRAINT fk_LichSDDV_DKDV FOREIGN KEY (MaPhieuThue, MaDV) REFERENCES DANGKYDV(MaPhieuPhong,MaDichVu)
 
-ALTER TABLE NHANVIEN ADD CONSTRAINT fk_nhanvien_account FOREIGN KEY (MaTK) REFERENCES ACCOUNT(MaTK)
-
-ALTER TABLE DOANKHACH ADD CONSTRAINT fk_doankhach_khachhang FOREIGN KEY (TruongDoan) REFERENCES KHACHHANG(MaKH)
-
-ALTER TABLE DangKyTour ADD CONSTRAINT fk_dangkytour_khachhang FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH)
-ALTER TABLE DangKyTour ADD CONSTRAINT fk_dangkytour_tourdulich FOREIGN KEY (MaTour) REFERENCES TOURDULICH(MaTour)
+ALTER TABLE ACCOUNT ADD CONSTRAINT fk_account_nhanvien FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV)
 
 ALTER TABLE HOADON ADD CONSTRAINT fk_hoadon_nhanvien FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV)
 ALTER TABLE HOADON ADD CONSTRAINT fk_hoadon_thuephong FOREIGN KEY (PhieuThuePhong) REFERENCES PHIEUTHUEPHONG(MaPhieuThue)
