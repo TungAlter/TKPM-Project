@@ -19,20 +19,16 @@ namespace BUS
         {
             return hoadon.Chi_Tiet_Mua_SP(maphieu);
         }
-        public int ThemHoaDon(HoaDon hd)
+        public string ThemHoaDon(HoaDon hd)
         {
             hd.NgayTT = DateTime.Now.ToString("yyyy-MM-dd");
             hd.MaNV = "NV01";
-            string res = hoadon.Them_Hoa_Don(hd);
-            if (res == "yes")
-            {
-                return 1;
-            }
-            else if (res == "no")
-            {
-                return 0;
-            }
-            return 0;
+            string res = hoadon.Them_Hoa_Don_DAL(hd);
+            return res;
+        }
+        public string LayTenKH(string maphieu)
+        {
+            return hoadon.Lay_Ten_KH(maphieu);
         }
     }
 }

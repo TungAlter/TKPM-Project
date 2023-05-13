@@ -83,6 +83,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_contact {
+            get {
+                object obj = ResourceManager.GetObject("add-contact", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_user {
             get {
                 object obj = ResourceManager.GetObject("add-user", resourceCulture);
@@ -253,6 +263,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap search {
+            get {
+                object obj = ResourceManager.GetObject("search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap skills {
             get {
                 object obj = ResourceManager.GetObject("skills", resourceCulture);
@@ -266,6 +286,26 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap skills__1_ {
             get {
                 object obj = ResourceManager.GetObject("skills (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transparency {
+            get {
+                object obj = ResourceManager.GetObject("transparency", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transparency__1_ {
+            get {
+                object obj = ResourceManager.GetObject("transparency (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

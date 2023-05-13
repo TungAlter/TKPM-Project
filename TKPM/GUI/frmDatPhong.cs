@@ -102,12 +102,12 @@ namespace GUI
                 hd.MaPhieu = pdp.LayMaPhieuBLL(tenphong);
 
                 hd.TongTien = lvi.SubItems[4].Text.ToString();
-                int res = hdbll.ThemHoaDon(hd);
-                if (res == 1)
+                string res = hdbll.ThemHoaDon(hd);
+                if (res != "none")
                 {
                     pdp.CapNhatPhieuDatPhongBLL(hd.MaPhieu);
                     ph.CapNhatTrangThaiPhongBLL(ph.Lay_Ma_Phong(tenphong), "0");
-                    MessageBox.Show("Thanh toán Thành Công !!!");
+                    MessageBox.Show("Thanh toán Thành Công - Mã hóa đơn:"+ res);
                 }
                 else
                 {

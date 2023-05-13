@@ -43,37 +43,49 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(388, 12);
+            this.textBox1.Font = new System.Drawing.Font("Sitka Small", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(448, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 23);
+            this.textBox1.Size = new System.Drawing.Size(210, 31);
             this.textBox1.TabIndex = 0;
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(638, 12);
+            this.btn_search.FlatAppearance.BorderSize = 0;
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_search.Image = global::GUI.Properties.Resources.transparency__1_;
+            this.btn_search.Location = new System.Drawing.Point(664, 12);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(65, 23);
+            this.btn_search.Size = new System.Drawing.Size(39, 33);
             this.btn_search.TabIndex = 1;
-            this.btn_search.Text = "Search";
             this.btn_search.UseVisualStyleBackColor = true;
             // 
             // btn_addKH
             // 
-            this.btn_addKH.Location = new System.Drawing.Point(12, 12);
+            this.btn_addKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addKH.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_addKH.Image = global::GUI.Properties.Resources.add_contact;
+            this.btn_addKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_addKH.Location = new System.Drawing.Point(12, 11);
             this.btn_addKH.Name = "btn_addKH";
-            this.btn_addKH.Size = new System.Drawing.Size(123, 23);
+            this.btn_addKH.Size = new System.Drawing.Size(163, 34);
             this.btn_addKH.TabIndex = 2;
-            this.btn_addKH.Text = "Thêm Khách Hàng";
+            this.btn_addKH.Text = "        Thêm Khách Hàng";
             this.btn_addKH.UseVisualStyleBackColor = true;
             this.btn_addKH.Click += new System.EventHandler(this.btn_addKH_Click);
             // 
             // btn_updateKH
             // 
-            this.btn_updateKH.Location = new System.Drawing.Point(159, 12);
+            this.btn_updateKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_updateKH.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_updateKH.Image = global::GUI.Properties.Resources.edit;
+            this.btn_updateKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_updateKH.Location = new System.Drawing.Point(193, 11);
             this.btn_updateKH.Name = "btn_updateKH";
-            this.btn_updateKH.Size = new System.Drawing.Size(85, 23);
+            this.btn_updateKH.Size = new System.Drawing.Size(105, 34);
             this.btn_updateKH.TabIndex = 3;
-            this.btn_updateKH.Text = "Chỉnh sửa";
+            this.btn_updateKH.Text = "      Chỉnh sửa";
             this.btn_updateKH.UseVisualStyleBackColor = true;
             // 
             // lv_KhachHang
@@ -124,11 +136,15 @@
             // 
             // btn_dsKH
             // 
-            this.btn_dsKH.Location = new System.Drawing.Point(267, 12);
+            this.btn_dsKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dsKH.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_dsKH.Image = global::GUI.Properties.Resources.list;
+            this.btn_dsKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dsKH.Location = new System.Drawing.Point(316, 11);
             this.btn_dsKH.Name = "btn_dsKH";
-            this.btn_dsKH.Size = new System.Drawing.Size(85, 23);
+            this.btn_dsKH.Size = new System.Drawing.Size(110, 34);
             this.btn_dsKH.TabIndex = 5;
-            this.btn_dsKH.Text = "Danh Sách";
+            this.btn_dsKH.Text = "      Danh Sách";
             this.btn_dsKH.UseVisualStyleBackColor = true;
             this.btn_dsKH.Click += new System.EventHandler(this.btn_dsKH_Click);
             // 

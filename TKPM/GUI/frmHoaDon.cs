@@ -16,6 +16,7 @@ namespace GUI
     {
         public static string maphieu = "";
         public static string ngaytt = "";
+        public static string mahd ="";
         public frmHoaDon()
         {
             InitializeComponent();
@@ -45,6 +46,7 @@ namespace GUI
             if(lv_HoaDon.SelectedItems.Count == 1)
             {
                 ListViewItem lvi = lv_HoaDon.SelectedItems[0];
+                mahd = lvi.SubItems[0].Text.ToString();
                 maphieu = lvi.SubItems[2].Text.ToString();
                 ngaytt = lvi.SubItems[4].Text.ToString();
                 frmChiTietHD cthd = new frmChiTietHD();

@@ -72,8 +72,15 @@ namespace DAL
             return dsHD;
         }
 
-        public string Them_Hoa_Don(HoaDon hd)
+        public string Them_Hoa_Don_DAL(HoaDon hd)
         {
+            int total = 0;
+            List<ChiTietHoaDon> cthd = Chi_Tiet_Mua_SP(hd.MaPhieu);
+            foreach(ChiTietHoaDon ct in cthd)
+            {
+                total += Int32.Parse(ct.thanhtien);
+            }
+            hd.TongTien = total.ToString();
             hd.MaHD = AutoGenerate("HD");
             Connection();
             SqlCommand command = new SqlCommand();
@@ -84,17 +91,55 @@ namespace DAL
             if (reader.Read())
             {
                 reader.Close();
-                return "no";
+                return "none";
             }
             else
             {
                 reader.Close();
-                return "yes";
+                return hd.MaHD;
             }
         }
-        
+        public string Lay_Ten_KH(string maphieu)
+        {
+            string tenkh = "";
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select TenKH from PHIEUTHUEPHONG pt join KHACHHANG kh on pt.MaKH = kh.MaKH where pt.MaPhieuThue=N'" + maphieu + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                tenkh = reader.GetString(0);
+            }
+            reader.Close();
+            return tenkh; 
+        }
+
         public List<ChiTietHoaDon> Chi_Tiet_Mua_SP(string maphieu)
         {
+            Connection();
+            SqlCommand command1 = new SqlCommand();
+            command1.CommandType = CommandType.Text;
+            command1.CommandText = "select ph.giathue,pt.NgayBD,pt.NgayKT from PHIEUTHUEPHONG pt join PHONG ph on pt.MaPhongThue = ph.MaPhong where pt.MaPhieuThue=N'" + maphieu + "'";
+            command1.Connection = connect;
+            SqlDataReader reader1 = command1.ExecuteReader();
+            while (reader1.Read())
+            {
+                int giathue = reader1.GetInt32(0);
+                DateTime ngaybd = reader1.GetDateTime(1);
+                DateTime ngaykt = reader1.GetDateTime(2);
+                int soluong = (ngaykt - ngaybd).Days;
+                int total = giathue * soluong;
+                ChiTietHoaDon hd = new ChiTietHoaDon();
+                hd.noidung = "Tiền thuê phòng";
+                hd.soluong = soluong.ToString();
+                hd.dongia = giathue.ToString();
+                hd.thanhtien = total.ToString();
+                dsCTHD.Add(hd);
+            }
+            reader1.Close();
+
             Connection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
