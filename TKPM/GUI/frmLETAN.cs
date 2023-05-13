@@ -41,7 +41,7 @@ namespace GUI
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 login = new Form1();
+            frmDangNhap login = new frmDangNhap();
             login.ShowDialog();
         }
 

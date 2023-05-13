@@ -36,7 +36,7 @@ namespace GUI
         {
             timer1.Stop();
             this.Hide();
-            Form1 login = new Form1();
+            frmDangNhap login = new frmDangNhap();
             login.ShowDialog();
         }
 
