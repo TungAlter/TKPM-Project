@@ -131,11 +131,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cascadia Code", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(183, 9);
+            this.label1.Location = new System.Drawing.Point(96, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 32);
+            this.label1.Size = new System.Drawing.Size(476, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Welcom To Dragon Hotel";
+            this.label1.Text = "Welcom To Hotel Management System";
             // 
             // panel2
             // 
@@ -193,7 +193,7 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // Form1
+            // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -213,7 +213,7 @@
             this.Controls.Add(this.taikhoan);
             this.Controls.Add(this.btn_DangNhap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "frmDangNhap";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
