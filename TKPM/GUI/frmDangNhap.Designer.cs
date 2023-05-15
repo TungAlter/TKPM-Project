@@ -131,11 +131,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cascadia Code", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(96, 9);
+            this.label1.Location = new System.Drawing.Point(89, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(476, 32);
+            this.label1.Size = new System.Drawing.Size(490, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Welcom To Hotel Management System";
+            this.label1.Text = "Welcome To Hotel Management System";
             // 
             // panel2
             // 

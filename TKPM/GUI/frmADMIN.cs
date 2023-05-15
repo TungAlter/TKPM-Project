@@ -59,6 +59,7 @@ namespace GUI
         private void btn_QLPhong_Click(object sender, EventArgs e)
         {
             MovePanel(btn_QLPhong);
+            OpenChildForm(new frmQLPhong());
         }
         private void MovePanel(Control btn)
         {
@@ -69,6 +70,17 @@ namespace GUI
         private void timer1_Tick(object sender, EventArgs e)
         {
             lb_time.Text = DateTime.Now.ToString("dd-MMM-yyyy hh:mm:ss tt");
+        }
+
+        private void btn_QLSP_Click(object sender, EventArgs e)
+        {
+            MovePanel(btn_QLSP);
+            OpenChildForm(new frmQLSanPham());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

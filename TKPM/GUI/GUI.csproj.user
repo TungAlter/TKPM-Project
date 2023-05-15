@@ -28,6 +28,12 @@
     <Compile Update="frmQLKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmQLPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmQLSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmQLTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>

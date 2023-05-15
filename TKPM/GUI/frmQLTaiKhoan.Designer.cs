@@ -297,6 +297,7 @@
             this.Controls.Add(this.btn_XoaTK);
             this.Controls.Add(this.btn_dsTK);
             this.Controls.Add(this.lvTaiKhoan);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmQLTaiKhoan";
             this.Text = "frmQLTaiKhoan";
             this.Load += new System.EventHandler(this.frmQLTaiKhoan_Load);

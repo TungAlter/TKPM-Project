@@ -187,6 +187,7 @@
             this.btn_QLSP.TabIndex = 4;
             this.btn_QLSP.Text = "      Quản lí Sản Phẩm";
             this.btn_QLSP.UseVisualStyleBackColor = true;
+            this.btn_QLSP.Click += new System.EventHandler(this.btn_QLSP_Click);
             // 
             // button3
             // 
@@ -201,6 +202,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "      Quản lí Loại Phòng";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_QLPhong
             // 
