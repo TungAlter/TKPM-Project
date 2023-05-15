@@ -80,8 +80,7 @@ CREATE TABLE NHANVIEN (
  MaNV Nvarchar(12) primary key, 
  TenNV Nvarchar(20) not null,
  CMND Nvarchar(20) not null,
- DiaChi Nvarchar(50) not null,
- MaTK Nvarchar(12) not null
+ DiaChi Nvarchar(50) not null
 )
 
 CREATE TABLE KHACHHANG(
