@@ -10,6 +10,7 @@ namespace DTO
     {
         public string MaSP { get; set; }
         public string TenSP { get; set; }
-        public string GiaSP { get; set; }
+        public int GiaSP { get; set; }
+        public int SoLuongTon { get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace DAL
                 DichVu dv = new DichVu();
                 dv.MaDV = masp;
                 dv.TenDV = tensp;
-                dv.GiaDV = giasp.ToString();
+                dv.GiaDV = giasp;
                 dsDV.Add(dv);
             }
             reader.Close();
@@ -75,6 +75,89 @@ namespace DAL
                 reader.Close();
             }
             return madv;
+        }
+
+        public string XoaDichVuDAL(string key)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "DELETE FROM DICHVU where MaDV=N'" + key + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return "no";
+            }
+            else
+            {
+                reader.Close();
+                return "yes";
+            }
+        }
+
+        public string ThemDichVuDAL(DichVu dv)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "INSERT INTO DICHVU VALUES (N'" + dv.MaDV + "', N'" + dv.TenDV + "'," + dv.GiaDV + ")";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return "no";
+            }
+            else
+            {
+                reader.Close();
+                return "yes";
+            }
+        }
+
+        public string UpdateDichVuDAL(DichVu dv)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "UPDATE DICHVU SET TenDV=N'" + dv.TenDV + "',DonGia=" + dv.GiaDV + " WHERE MaDV=N'" + dv.MaDV + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return "no";
+            }
+            else
+            {
+                reader.Close();
+                return "yes";
+            }
+        }
+
+        public List<DichVu> SearchDichVuDAL(string key)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select* from DICHVU where MaDV=N'" + key + "' or TenDV=N'" + key + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string madv = reader.GetString(0);
+                string tendv = reader.GetString(1);
+                int giadv = reader.GetInt32(2);
+                DichVu dv = new DichVu();
+                dv.MaDV = madv;
+                dv.TenDV = tendv;
+                dv.GiaDV = giadv;
+                dsDV.Add(dv);
+            }
+            reader.Close();
+            return dsDV;
         }
     }
 }

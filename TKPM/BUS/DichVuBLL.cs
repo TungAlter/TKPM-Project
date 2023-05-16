@@ -30,5 +30,52 @@ namespace BUS
                 return 0;
             }
         }
+
+        public int XoaDichVuBLL(string key)
+        {
+            string res = dichvu.XoaDichVuDAL(key);
+            if (res == "yes")
+            {
+                return 1;
+            }
+            else if (res == "no")
+            {
+                return 0;
+            }
+            return 0;
+        }
+
+        public int ThemDichVuBLL(DichVu dv)
+        {
+            string res = dichvu.ThemDichVuDAL(dv);
+            if (res == "yes")
+            {
+                return 1;
+            }
+            else if (res == "no")
+            {
+                return 0;
+            }
+            return 0;
+        }
+
+        public int UpdateDichVuBLL(DichVu dv)
+        {
+            string res = dichvu.UpdateDichVuDAL(dv);
+            if (res == "yes")
+            {
+                return 1;
+            }
+            else if (res == "no")
+            {
+                return 0;
+            }
+            return 0;
+        }
+
+        public List<DichVu> SearchDichVuBLL(string key)
+        {
+            return dichvu.SearchDichVuDAL(key);
+        }
     }
 }
