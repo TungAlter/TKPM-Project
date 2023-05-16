@@ -45,7 +45,7 @@ namespace BUS
             return 0;
         }
 
-        public int ThemTaiKhoanBLL(Phong temp)
+        public int ThemPhongBLL(Phong temp)
         {
             string res = Room.ThemPhongDAL(temp);
             if (res == "yes")

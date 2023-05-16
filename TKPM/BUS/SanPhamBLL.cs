@@ -31,5 +31,52 @@ namespace BUS
                 return 0;
             }
         }
+
+        public int XoaSanPhamBLL(string key)
+        {
+            string res = sanpham.XoaSanPhamDAL(key);
+            if (res == "yes")
+            {
+                return 1;
+            }
+            else if (res == "no")
+            {
+                return 0;
+            }
+            return 0;
+        }
+
+        public int ThemSanPhamBLL(SanPham sp)
+        {
+            string res = sanpham.ThemSanPhamDAL(sp);
+            if (res == "yes")
+            {
+                return 1;
+            }
+            else if (res == "no")
+            {
+                return 0;
+            }
+            return 0;
+        }
+
+        public int UpdateSanPhamBLL(SanPham sp)
+        {
+            string res = sanpham.UpdateSanPhamDAL(sp);
+            if (res == "yes")
+            {
+                return 1;
+            }
+            else if (res == "no")
+            {
+                return 0;
+            }
+            return 0;
+        }
+
+        public List<SanPham> SearchSanPhamBLL(string key)
+        {
+            return sanpham.SearchSanPhamDAL(key);
+        }
     }
 }
