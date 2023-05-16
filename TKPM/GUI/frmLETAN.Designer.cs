@@ -40,6 +40,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_DichVu = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.Header_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,6 +57,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.panel2.Controls.Add(this.btn_DichVu);
             this.panel2.Controls.Add(this.btn_HoaDon);
             this.panel2.Controls.Add(this.btn_QLKH);
             this.panel2.Controls.Add(this.btn_DatPhong);
@@ -186,6 +188,20 @@
             this.label3.Text = "WELCOM LE TAN !";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btn_DichVu
+            // 
+            this.btn_DichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.btn_DichVu.FlatAppearance.BorderSize = 0;
+            this.btn_DichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DichVu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_DichVu.Location = new System.Drawing.Point(13, 166);
+            this.btn_DichVu.Name = "btn_DichVu";
+            this.btn_DichVu.Size = new System.Drawing.Size(153, 51);
+            this.btn_DichVu.TabIndex = 4;
+            this.btn_DichVu.Text = "    Dịch Vụ";
+            this.btn_DichVu.UseVisualStyleBackColor = false;
+            this.btn_DichVu.Click += new System.EventHandler(this.btn_DichVu_Click);
+            // 
             // frmLETAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -223,5 +239,6 @@
         private Panel panel1;
         private Label label3;
         private Button btn_HoaDon;
+        private Button btn_DichVu;
     }
 }

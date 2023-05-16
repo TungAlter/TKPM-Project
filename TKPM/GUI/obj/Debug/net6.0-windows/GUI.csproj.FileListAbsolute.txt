@@ -81,3 +81,5 @@ E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\ref\GUI.dll
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmUpdateKH.resources
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmQLSanPham.resources
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmQLPhong.resources
+E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmBanDichVu.resources
+E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmDichVu.resources

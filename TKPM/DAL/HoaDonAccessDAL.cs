@@ -163,6 +163,28 @@ namespace DAL
                 dsCTHD.Add(hd);
             }
             reader.Close();
+
+            Connection();
+            SqlCommand command2 = new SqlCommand();
+            command2.CommandType = CommandType.Text;
+            command2.CommandText = "select* from DANGKYDV dk join DICHVU dv on dk.MaDichVu = dv.MaDV where dk.MaPhieuPhong=N'" + maphieu + "'";
+            command2.Connection = connect;
+            SqlDataReader reader2 = command2.ExecuteReader();
+            while (reader2.Read())
+            {
+                string phieu = reader2.GetString(0);
+                string tendv = reader2.GetString(5);
+                DateTime ngaymua = reader2.GetDateTime(2);
+                int thanhtien = reader2.GetInt32(3);
+                int dongia = reader2.GetInt32(6);
+                ChiTietHoaDon hd = new ChiTietHoaDon();
+                hd.noidung = tendv;
+                hd.dongia = dongia.ToString();
+                hd.soluong = "1";
+                hd.thanhtien = thanhtien.ToString();
+                dsCTHD.Add(hd);
+            }
+            reader2.Close();
             return dsCTHD;
         }
     }
