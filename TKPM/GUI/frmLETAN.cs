@@ -54,5 +54,10 @@ namespace GUI
         {
             OpenChildForm(new frmHoaDon());
         }
+
+        private void btn_DichVu_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmDichVu());
+        }
     }
 }

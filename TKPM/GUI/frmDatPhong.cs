@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using System.Runtime.Intrinsics.Arm;
 
 namespace GUI
 {
@@ -130,6 +131,23 @@ namespace GUI
                 maphieu = pdp.LayMaPhieuBLL(tenphong);
                 frmBanSanPham frmBanSanPham = new frmBanSanPham();
                 frmBanSanPham.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Chọn một phiếu đặt phòng !!");
+            }
+        }
+
+        private void btn_DKDichVu_Click(object sender, EventArgs e)
+        {
+            PhieuDatPhongBLL pdp = new PhieuDatPhongBLL();
+            if (lv_ttDatPhong.SelectedItems.Count == 1)
+            {
+                ListViewItem lvi = lv_ttDatPhong.SelectedItems[0];
+                string tenphong = lvi.SubItems[0].Text.ToString();
+                maphieu = pdp.LayMaPhieuBLL(tenphong);
+                frmBanDichVu frmBanDichVu = new frmBanDichVu();
+                frmBanDichVu.ShowDialog();
             }
             else
             {
