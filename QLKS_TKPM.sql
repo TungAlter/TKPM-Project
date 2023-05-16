@@ -116,6 +116,9 @@ ALTER TABLE ACCOUNT ADD CONSTRAINT fk_account_nhanvien FOREIGN KEY (MaNV) REFERE
 ALTER TABLE HOADON ADD CONSTRAINT fk_hoadon_nhanvien FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV)
 ALTER TABLE HOADON ADD CONSTRAINT fk_hoadon_thuephong FOREIGN KEY (PhieuThuePhong) REFERENCES PHIEUTHUEPHONG(MaPhieuThue)
 
+INSERT INTO NHANVIEN VALUES (N'NV01', N'Nguyễn Quang', N'0563343', N'127 Phạm Văn Đồng, HCM')
+INSERT INTO NHANVIEN VALUES (N'NV02', N'Nguyễn A', N'0563343', N'227 Nguyễn Văn Cừ, HCM')
+
 INSERT INTO ACCOUNT ( MaTK,LoaiTK,MaNV,Usrname,Pwd) VALUES (N'TK01', N'AD',N'NV01',N'admin',N'admin')
 INSERT INTO ACCOUNT ( MaTK,LoaiTK,MaNV,Usrname,Pwd) VALUES (N'TK02', N'LT',N'NV02',N'letan',N'123')
 
@@ -123,17 +126,15 @@ INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP01'
 INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP02',N'Phòng Đôi',20,0)
 INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP03',N'Phòng VIP',30,1)
 
-INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P104',N'Phòng 104','Single',200000,2,N'Đã dọn',0)
-INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P102',N'Phòng 102','Couple',300000,4,N'Chưa dọn',0)
-INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P103',N'Phòng 103','VIP',2000000,6,N'Đã dọn',0)
+INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TinhTrang,TrangThai) VALUES (N'P104',N'Phòng 104','LP01',200000,2,N'Đã dọn',0)
+INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TinhTrang,TrangThai) VALUES (N'P102',N'Phòng 102','LP02',300000,4,N'Chưa dọn',0)
+INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TinhTrang,TrangThai) VALUES (N'P103',N'Phòng 103','LP03',2000000,6,N'Đã dọn',0)
 
 INSERT INTO KHACHHANG(MaKH,TenKH,NgaySinh,CMND,DiaChi) VALUES (N'KH01',N'Duy','1999-03-20',N'123456',N'20 Ngo Quyen')
 
-INSERT INTO NHANVIEN VALUES (N'NV01', N'Nguyễn Quang', N'0563343', N'127 Phạm Văn Đồng, HCM', N'TK01')
-
-INSERT INTO SANPHAM VALUES (N'SP01', N'Coca Cola', 10000)
-INSERT INTO SANPHAM VALUES (N'SP02', N'Pepsi', 15000)
-INSERT INTO SANPHAM VALUES (N'SP03', N'Nước Suối', 8000)
+INSERT INTO SANPHAM VALUES (N'SP01', N'Coca Cola', 10000,100)
+INSERT INTO SANPHAM VALUES (N'SP02', N'Pepsi', 15000,200)
+INSERT INTO SANPHAM VALUES (N'SP03', N'Nước Suối', 8000,500)
 
 create procedure sp_Login
 (
