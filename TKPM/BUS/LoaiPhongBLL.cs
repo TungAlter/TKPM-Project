@@ -63,5 +63,10 @@ namespace BUS
         {
             return loaiphong.SearchLoaiPhongDAL(key);
         }
+
+        public string LayMaLoaiPhongBLL(string tenloai)
+        {
+            return loaiphong.LayMaLoaiPhong(tenloai);
+        }
     }
 }

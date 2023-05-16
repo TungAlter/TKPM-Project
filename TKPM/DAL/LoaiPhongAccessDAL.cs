@@ -39,6 +39,48 @@ namespace DAL
             reader.Close();
             return dsLP;
         }
+        public string LayTenLoaiPhong(string maloaiphong)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "SELECT TenLoaiPhong from LOAIPHONG where MaLoaiPhong=N'" + maloaiphong + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                string name = reader.GetString(0);
+                reader.Close();
+                return name;
+            }
+            else
+            {
+                reader.Close();
+                return "none";
+            }
+        }
+
+        public string LayMaLoaiPhong(string tenloaiphong)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "SELECT MaLoaiPhong from LOAIPHONG where TenLoaiPhong=N'" + tenloaiphong + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                string name = reader.GetString(0);
+                reader.Close();
+                return name;
+            }
+            else
+            {
+                reader.Close();
+                return "none";
+            }
+        }
+
 
         public string XoaLoaiPhongDAL(string key)
         {

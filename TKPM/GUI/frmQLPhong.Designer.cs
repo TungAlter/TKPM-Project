@@ -28,63 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_XoaTK = new System.Windows.Forms.Button();
-            this.btn_dsKH = new System.Windows.Forms.Button();
-            this.lv_KhachHang = new System.Windows.Forms.ListView();
+            this.btn_XoaPH = new System.Windows.Forms.Button();
+            this.btn_dsPH = new System.Windows.Forms.Button();
+            this.lv_Phong = new System.Windows.Forms.ListView();
             this.masp = new System.Windows.Forms.ColumnHeader();
             this.tensp = new System.Windows.Forms.ColumnHeader();
             this.loaiph = new System.Windows.Forms.ColumnHeader();
             this.doniga = new System.Windows.Forms.ColumnHeader();
-            this.btn_updateKH = new System.Windows.Forms.Button();
-            this.btn_addKH = new System.Windows.Forms.Button();
+            this.sl = new System.Windows.Forms.ColumnHeader();
+            this.btn_updatePH = new System.Windows.Forms.Button();
+            this.btn_addPhong = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.sl = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
-            // btn_XoaTK
+            // btn_XoaPH
             // 
-            this.btn_XoaTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_XoaTK.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_XoaTK.Image = global::GUI.Properties.Resources.delete;
-            this.btn_XoaTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_XoaTK.Location = new System.Drawing.Point(287, 13);
-            this.btn_XoaTK.Name = "btn_XoaTK";
-            this.btn_XoaTK.Size = new System.Drawing.Size(82, 34);
-            this.btn_XoaTK.TabIndex = 19;
-            this.btn_XoaTK.Text = "          Xóa";
-            this.btn_XoaTK.UseVisualStyleBackColor = true;
+            this.btn_XoaPH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_XoaPH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_XoaPH.Image = global::GUI.Properties.Resources.delete;
+            this.btn_XoaPH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_XoaPH.Location = new System.Drawing.Point(287, 13);
+            this.btn_XoaPH.Name = "btn_XoaPH";
+            this.btn_XoaPH.Size = new System.Drawing.Size(82, 34);
+            this.btn_XoaPH.TabIndex = 19;
+            this.btn_XoaPH.Text = "          Xóa";
+            this.btn_XoaPH.UseVisualStyleBackColor = true;
+            this.btn_XoaPH.Click += new System.EventHandler(this.btn_XoaPH_Click);
             // 
-            // btn_dsKH
+            // btn_dsPH
             // 
-            this.btn_dsKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_dsKH.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_dsKH.Image = global::GUI.Properties.Resources.list;
-            this.btn_dsKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dsKH.Location = new System.Drawing.Point(384, 12);
-            this.btn_dsKH.Name = "btn_dsKH";
-            this.btn_dsKH.Size = new System.Drawing.Size(110, 34);
-            this.btn_dsKH.TabIndex = 18;
-            this.btn_dsKH.Text = "      Danh Sách";
-            this.btn_dsKH.UseVisualStyleBackColor = true;
+            this.btn_dsPH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dsPH.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_dsPH.Image = global::GUI.Properties.Resources.list;
+            this.btn_dsPH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dsPH.Location = new System.Drawing.Point(384, 12);
+            this.btn_dsPH.Name = "btn_dsPH";
+            this.btn_dsPH.Size = new System.Drawing.Size(110, 34);
+            this.btn_dsPH.TabIndex = 18;
+            this.btn_dsPH.Text = "      Danh Sách";
+            this.btn_dsPH.UseVisualStyleBackColor = true;
+            this.btn_dsPH.Click += new System.EventHandler(this.btn_dsPH_Click);
             // 
-            // lv_KhachHang
+            // lv_Phong
             // 
-            this.lv_KhachHang.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lv_Phong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.masp,
             this.tensp,
             this.loaiph,
             this.doniga,
             this.sl});
-            this.lv_KhachHang.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lv_KhachHang.FullRowSelect = true;
-            this.lv_KhachHang.GridLines = true;
-            this.lv_KhachHang.Location = new System.Drawing.Point(12, 54);
-            this.lv_KhachHang.Name = "lv_KhachHang";
-            this.lv_KhachHang.Size = new System.Drawing.Size(741, 344);
-            this.lv_KhachHang.TabIndex = 17;
-            this.lv_KhachHang.UseCompatibleStateImageBehavior = false;
-            this.lv_KhachHang.View = System.Windows.Forms.View.Details;
+            this.lv_Phong.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lv_Phong.FullRowSelect = true;
+            this.lv_Phong.GridLines = true;
+            this.lv_Phong.Location = new System.Drawing.Point(12, 54);
+            this.lv_Phong.Name = "lv_Phong";
+            this.lv_Phong.Size = new System.Drawing.Size(741, 344);
+            this.lv_Phong.TabIndex = 17;
+            this.lv_Phong.UseCompatibleStateImageBehavior = false;
+            this.lv_Phong.View = System.Windows.Forms.View.Details;
             // 
             // masp
             // 
@@ -109,31 +111,39 @@
             this.doniga.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.doniga.Width = 150;
             // 
-            // btn_updateKH
+            // sl
             // 
-            this.btn_updateKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_updateKH.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_updateKH.Image = global::GUI.Properties.Resources.edit;
-            this.btn_updateKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_updateKH.Location = new System.Drawing.Point(167, 13);
-            this.btn_updateKH.Name = "btn_updateKH";
-            this.btn_updateKH.Size = new System.Drawing.Size(105, 34);
-            this.btn_updateKH.TabIndex = 16;
-            this.btn_updateKH.Text = "      Chỉnh sửa";
-            this.btn_updateKH.UseVisualStyleBackColor = true;
+            this.sl.Text = "Số Lượng";
+            this.sl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.sl.Width = 120;
             // 
-            // btn_addKH
+            // btn_updatePH
             // 
-            this.btn_addKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_addKH.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_addKH.Image = global::GUI.Properties.Resources.add_contact;
-            this.btn_addKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_addKH.Location = new System.Drawing.Point(12, 13);
-            this.btn_addKH.Name = "btn_addKH";
-            this.btn_addKH.Size = new System.Drawing.Size(140, 34);
-            this.btn_addKH.TabIndex = 15;
-            this.btn_addKH.Text = "        Thêm Phòng";
-            this.btn_addKH.UseVisualStyleBackColor = true;
+            this.btn_updatePH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_updatePH.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_updatePH.Image = global::GUI.Properties.Resources.edit;
+            this.btn_updatePH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_updatePH.Location = new System.Drawing.Point(167, 13);
+            this.btn_updatePH.Name = "btn_updatePH";
+            this.btn_updatePH.Size = new System.Drawing.Size(105, 34);
+            this.btn_updatePH.TabIndex = 16;
+            this.btn_updatePH.Text = "      Chỉnh sửa";
+            this.btn_updatePH.UseVisualStyleBackColor = true;
+            this.btn_updatePH.Click += new System.EventHandler(this.btn_updatePH_Click);
+            // 
+            // btn_addPhong
+            // 
+            this.btn_addPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addPhong.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_addPhong.Image = global::GUI.Properties.Resources.add_contact;
+            this.btn_addPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_addPhong.Location = new System.Drawing.Point(12, 13);
+            this.btn_addPhong.Name = "btn_addPhong";
+            this.btn_addPhong.Size = new System.Drawing.Size(140, 34);
+            this.btn_addPhong.TabIndex = 15;
+            this.btn_addPhong.Text = "        Thêm Phòng";
+            this.btn_addPhong.UseVisualStyleBackColor = true;
+            this.btn_addPhong.Click += new System.EventHandler(this.btn_addPhong_Click);
             // 
             // btn_search
             // 
@@ -155,23 +165,17 @@
             this.textBox1.Size = new System.Drawing.Size(210, 31);
             this.textBox1.TabIndex = 13;
             // 
-            // sl
-            // 
-            this.sl.Text = "Số Lượng";
-            this.sl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.sl.Width = 120;
-            // 
             // frmQLPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(765, 410);
-            this.Controls.Add(this.btn_XoaTK);
-            this.Controls.Add(this.btn_dsKH);
-            this.Controls.Add(this.lv_KhachHang);
-            this.Controls.Add(this.btn_updateKH);
-            this.Controls.Add(this.btn_addKH);
+            this.Controls.Add(this.btn_XoaPH);
+            this.Controls.Add(this.btn_dsPH);
+            this.Controls.Add(this.lv_Phong);
+            this.Controls.Add(this.btn_updatePH);
+            this.Controls.Add(this.btn_addPhong);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -184,16 +188,16 @@
 
         #endregion
 
-        private Button btn_XoaTK;
-        private Button btn_dsKH;
-        private ListView lv_KhachHang;
+        private Button btn_XoaPH;
+        private Button btn_dsPH;
+        private ListView lv_Phong;
         private ColumnHeader masp;
         private ColumnHeader tensp;
         private ColumnHeader loaiph;
         private ColumnHeader doniga;
         private ColumnHeader sl;
-        private Button btn_updateKH;
-        private Button btn_addKH;
+        private Button btn_updatePH;
+        private Button btn_addPhong;
         private Button btn_search;
         private TextBox textBox1;
     }

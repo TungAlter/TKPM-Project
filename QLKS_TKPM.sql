@@ -5,6 +5,7 @@ CREATE DATABASE QLKS_TKPM1
 go
 
 use QLKS_TKPM1
+
 CREATE TABLE LOAIPHONG(
  MaLoaiPhong nvarchar(12) PRIMARY KEY NOT NULL,
  TenLoaiPhong nvarchar(12),
@@ -14,7 +15,7 @@ CREATE TABLE LOAIPHONG(
 
 CREATE TABLE PHONG(
  MaPhong nvarchar(12) PRIMARY KEY NOT NULL,
- TenPhong nvarchar(12),
+ TenPhong nvarchar(20),
  LoaiPhong nvarchar(12),
  GiaThue int,
  SoNguoi int,
@@ -50,7 +51,7 @@ CREATE TABLE DANGKYDV (
 CREATE TABLE DICHVU(
  MaDV nvarchar(12) PRIMARY KEY NOT NULL,
  TenDV nvarchar(12),
- DonGia int,
+ DonGia int
 )
 
 CREATE TABLE SANPHAM(
@@ -124,23 +125,28 @@ INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP01'
 INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP02',N'Phòng Đôi',20,0)
 INSERT INTO LOAIPHONG( MaLoaiPhong,TenLoaiPhong,SoLuong,HoTroDV) VALUES (N'LP03',N'Phòng VIP',30,1)
 
-INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P104',N'Phòng 104','Single',200000,2,N'Đã dọn',0)
-INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P102',N'Phòng 102','Couple',300000,4,N'Chưa dọn',0)
-INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TrangThai,TinhTrang) VALUES (N'P103',N'Phòng 103','VIP',2000000,6,N'Đã dọn',0)
+INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TinhTrang,TrangThai) VALUES (N'P104',N'Phòng 104',N'LP01',200000,2,N'Đã dọn',0)
+INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TinhTrang,TrangThai) VALUES (N'P102',N'Phòng 102',N'LP02',300000,4,N'Chưa dọn',0)
+INSERT INTO PHONG(MaPhong,TenPhong,LoaiPhong,GiaThue,SoNguoi,TinhTrang,TrangThai) VALUES (N'P103',N'Phòng 103',N'LP03',2000000,6,N'Đã dọn',0)
 
 INSERT INTO KHACHHANG(MaKH,TenKH,NgaySinh,CMND,DiaChi) VALUES (N'KH01',N'Nguyễn Huy','1999-03-20',N'213546',N'20 Ngô Quyền, Q1, TPHCM')
-INSERT INTO KHACHHANG(MaKH,TenKH,NgaySinh,CMND,DiaChi) VALUES (N'KH01',N'Trần Phi','2001-11-19',N'537821',N'227 Nguyễn Văn Cừ, Q5, TPHCM')
+INSERT INTO KHACHHANG(MaKH,TenKH,NgaySinh,CMND,DiaChi) VALUES (N'KH02',N'Trần Phi','2001-11-19',N'537821',N'227 Nguyễn Văn Cừ, Q5, TPHCM')
 
-INSERT INTO NHANVIEN VALUES (N'NV01', N'Nguyễn Quang', N'0563343', N'127 Phạm Văn Đồng, HCM', N'TK02')
+INSERT INTO NHANVIEN VALUES (N'NV01', N'Nguyễn Quang', N'563343', N'127 Phạm Văn Đồng, HCM')
+INSERT INTO NHANVIEN VALUES (N'NV02', N'Lê Dương', N'945613', N'27 Nguyễn Văn Cừ, TPHCM')
+INSERT INTO NHANVIEN VALUES (N'NV03', N'Hồ Anh', N'435134', N'31 Phan Văn Trị,GV, TPHCM')
 
-INSERT INTO SANPHAM VALUES (N'SP01', N'Coca Cola', 10000)
-INSERT INTO SANPHAM VALUES (N'SP02', N'Pepsi', 15000)
-INSERT INTO SANPHAM VALUES (N'SP03', N'Nước Suối', 8000)
+INSERT INTO SANPHAM VALUES (N'SP01', N'Coca Cola', 10000,15)
+INSERT INTO SANPHAM VALUES (N'SP02', N'Pepsi', 15000,11)
+INSERT INTO SANPHAM VALUES (N'SP03', N'Nước Suối', 8000,12)
 
-INSERT INTO DICHVU VALUES(N'DV01',N'Bida',200000,4)
-INSERT INTO DICHVU VALUES(N'DV02',N'Phòng Gym',100000,1)
-INSERT INTO DICHVU VALUES(N'DV03',N'Massage',180000,2)
-INSERT INTO DICHVU VALUES(N'DV04',N'Buffet',150000,1)
+INSERT INTO DICHVU VALUES(N'DV01',N'Bida',200000)
+INSERT INTO DICHVU VALUES(N'DV02',N'Phòng Gym',100000)
+INSERT INTO DICHVU VALUES(N'DV03',N'Massage',180000)
+INSERT INTO DICHVU VALUES(N'DV04',N'Buffet',150000)
+
+alter table LICHSUMUASP add ThanhTien int
+alter table DANGKYDV add ThanhTien int
 
 create procedure sp_Login
 (

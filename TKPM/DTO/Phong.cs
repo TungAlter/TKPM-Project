@@ -13,8 +13,8 @@ namespace DTO
         public string LoaiPhong { get; set; }
         public int GiaThue { get; set; }
         public int SoNguoi { get; set; }
-        public string TrangThai { get; set; }
-        public bool TinhTrang { get; set; }
+        public string TinhTrang { get; set; }
+        public bool TrangThai { get; set; }
 
     }
 }

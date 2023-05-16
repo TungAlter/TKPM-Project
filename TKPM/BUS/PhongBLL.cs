@@ -45,8 +45,12 @@ namespace BUS
             return 0;
         }
 
-        public int ThemTaiKhoanBLL(Phong temp)
+        public int ThemPhongBLL(Phong temp)
         {
+            LoaiPhongBLL lpbll = new LoaiPhongBLL();
+            string maloai = lpbll.LayMaLoaiPhongBLL(temp.LoaiPhong);
+            temp.LoaiPhong = maloai;
+            temp.TinhTrang = "Đã dọn";
             string res = Room.ThemPhongDAL(temp);
             if (res == "yes")
             {

@@ -46,7 +46,13 @@
     <Compile Update="frmThemKH.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmThemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmUpdateKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmUpdatePhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmUpdateTaiKhoan.cs">

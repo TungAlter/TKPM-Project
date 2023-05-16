@@ -38,7 +38,7 @@ namespace GUI
                 lvi.SubItems.Add(ph.GiaThue.ToString());
                 lvi.SubItems.Add(ph.SoNguoi.ToString());
                 //lvi.SubItems.Add(ph.SoNguoi.ToString());
-                lvi.SubItems.Add(ph.TrangThai);
+                lvi.SubItems.Add(ph.TinhTrang);
                 //lvi.SubItems.Add(ph.TinhTrang.ToString());
 
                 lv_dsPhongTrong.Items.Add(lvi);
