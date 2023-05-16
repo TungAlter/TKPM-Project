@@ -10,7 +10,7 @@ namespace DTO
     {
         public string MaDV { get; set; }
         public string TenDV { get; set; }
-        public string GiaDV { get; set; }
+        public int GiaDV { get; set; }
 
     }
 }
