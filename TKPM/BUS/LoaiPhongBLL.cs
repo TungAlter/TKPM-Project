@@ -45,7 +45,7 @@ namespace BUS
             return 0;
         }
 
-        public int UpdateTaiKhoanBLL(LoaiPhong lp)
+        public int UpdateloaiPhongBLL(LoaiPhong lp)
         {
             string res = loaiphong.UpdateLoaiPhongDAL(lp);
             if (res == "yes")
@@ -59,7 +59,7 @@ namespace BUS
             return 0;
         }
 
-        public List<LoaiPhong> SearchTaiKhoanBLL(string key)
+        public List<LoaiPhong> SearchLoaiPhongBLL(string key)
         {
             return loaiphong.SearchLoaiPhongDAL(key);
         }

@@ -30,5 +30,52 @@ namespace BUS
         {
             return Room.UpdateTrangThaiPhong(maph, trangthai);
         }
+
+        public int XoaPhongBLL(string key)
+        {
+            string res = Room.XoaPhongDAL(key);
+            if (res == "yes")
+            {
+                return 1;
+            }
+            else if (res == "no")
+            {
+                return 0;
+            }
+            return 0;
+        }
+
+        public int ThemTaiKhoanBLL(Phong temp)
+        {
+            string res = Room.ThemPhongDAL(temp);
+            if (res == "yes")
+            {
+                return 1;
+            }
+            else if (res == "no")
+            {
+                return 0;
+            }
+            return 0;
+        }
+
+        public int UpdatePhongBLL(Phong temp)
+        {
+            string res = Room.UpdatePhongDAL(temp);
+            if (res == "yes")
+            {
+                return 1;
+            }
+            else if (res == "no")
+            {
+                return 0;
+            }
+            return 0;
+        }
+
+        public List<Phong> SearchPhongBLL(string key)
+        {
+            return Room.SearchPhongDAL(key);
+        }
     }
 }
