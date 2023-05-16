@@ -62,7 +62,25 @@ namespace GUI
             foreach (DichVu dv in dsdvGUI)
             {
                 ListViewItem lvi = new ListViewItem(dv.TenDV);
-                lvi.SubItems.Add(dv.GiaDV);
+                lvi.SubItems.Add(dv.GiaDV.ToString());
+                lv_dsDichVu.Items.Add(lvi);
+            }
+            lv_dsDichVu.EndUpdate();
+        }
+
+        private void btn_SearchSP_Click(object sender, EventArgs e)
+        {
+            string key = txt_key.Text.ToString();
+            DichVuBLL dvbll = new DichVuBLL();
+            List<DichVu> dsdvGUI = null;
+            dsdvGUI = dvbll.SearchDichVuBLL(key);
+            lv_dsDichVu.BeginUpdate();
+            lv_dsDichVu.Items.Clear();
+            foreach (DichVu dv in dsdvGUI)
+            {
+                ListViewItem lvi = new ListViewItem(dv.TenDV);
+                lvi.SubItems.Add(dv.GiaDV.ToString());
+
                 lv_dsDichVu.Items.Add(lvi);
             }
             lv_dsDichVu.EndUpdate();

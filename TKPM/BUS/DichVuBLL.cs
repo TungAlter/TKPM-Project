@@ -75,6 +75,7 @@ namespace BUS
 
         public List<DichVu> SearchDichVuBLL(string key)
         {
+            if (key == "") return dichvu.Get_All_DichVu();
             return dichvu.SearchDichVuDAL(key);
         }
     }

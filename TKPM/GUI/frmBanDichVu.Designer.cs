@@ -31,7 +31,7 @@
             this.btn_Exit = new System.Windows.Forms.Button();
             this.btn_ChonDV = new System.Windows.Forms.Button();
             this.btn_SearchSP = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_key = new System.Windows.Forms.TextBox();
             this.lv_dsDichVu = new System.Windows.Forms.ListView();
             this.tendv = new System.Windows.Forms.ColumnHeader();
             this.giasdv = new System.Windows.Forms.ColumnHeader();
@@ -65,13 +65,14 @@
             this.btn_SearchSP.TabIndex = 9;
             this.btn_SearchSP.Text = "Tìm kiếm";
             this.btn_SearchSP.UseVisualStyleBackColor = true;
+            this.btn_SearchSP.Click += new System.EventHandler(this.btn_SearchSP_Click);
             // 
-            // textBox1
+            // txt_key
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 23);
-            this.textBox1.TabIndex = 8;
+            this.txt_key.Location = new System.Drawing.Point(13, 11);
+            this.txt_key.Name = "txt_key";
+            this.txt_key.Size = new System.Drawing.Size(245, 23);
+            this.txt_key.TabIndex = 8;
             // 
             // lv_dsDichVu
             // 
@@ -106,7 +107,7 @@
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_ChonDV);
             this.Controls.Add(this.btn_SearchSP);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_key);
             this.Controls.Add(this.lv_dsDichVu);
             this.Name = "frmBanDichVu";
             this.Text = "Bán Dịch Vụ";
@@ -120,7 +121,7 @@
         private Button btn_Exit;
         private Button btn_ChonDV;
         private Button btn_SearchSP;
-        private TextBox textBox1;
+        private TextBox txt_key;
         private ListView lv_dsDichVu;
         private ColumnHeader tendv;
         private ColumnHeader giasdv;

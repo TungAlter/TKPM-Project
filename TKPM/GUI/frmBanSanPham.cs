@@ -34,7 +34,7 @@ namespace GUI
             foreach (SanPham sp in dsspGUI)
             {
                 ListViewItem lvi = new ListViewItem(sp.TenSP);
-                lvi.SubItems.Add(sp.GiaSP);
+                lvi.SubItems.Add(sp.GiaSP.ToString());
                 lv_dsSanPham.Items.Add(lvi);
             }
             lv_dsSanPham.EndUpdate();
