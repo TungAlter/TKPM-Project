@@ -40,7 +40,7 @@
             this.panel_slide = new System.Windows.Forms.Panel();
             this.btn_QLDV = new System.Windows.Forms.Button();
             this.btn_QLSP = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_QLLoaiPhong = new System.Windows.Forms.Button();
             this.btn_QLPhong = new System.Windows.Forms.Button();
             this.btn_QLNV = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -143,7 +143,7 @@
             this.panel1.Controls.Add(this.panel_slide);
             this.panel1.Controls.Add(this.btn_QLDV);
             this.panel1.Controls.Add(this.btn_QLSP);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btn_QLLoaiPhong);
             this.panel1.Controls.Add(this.btn_QLPhong);
             this.panel1.Controls.Add(this.btn_QLNV);
             this.panel1.Controls.Add(this.btn_QLTK);
@@ -173,6 +173,7 @@
             this.btn_QLDV.TabIndex = 5;
             this.btn_QLDV.Text = "      Quản lí Dịch Vụ";
             this.btn_QLDV.UseVisualStyleBackColor = true;
+            this.btn_QLDV.Click += new System.EventHandler(this.btn_QLDV_Click);
             // 
             // btn_QLSP
             // 
@@ -189,20 +190,20 @@
             this.btn_QLSP.UseVisualStyleBackColor = true;
             this.btn_QLSP.Click += new System.EventHandler(this.btn_QLSP_Click);
             // 
-            // button3
+            // btn_QLLoaiPhong
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Image = global::GUI.Properties.Resources.house;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(11, 129);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(169, 37);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "      Quản lí Loại Phòng";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_QLLoaiPhong.FlatAppearance.BorderSize = 0;
+            this.btn_QLLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QLLoaiPhong.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_QLLoaiPhong.Image = global::GUI.Properties.Resources.house;
+            this.btn_QLLoaiPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_QLLoaiPhong.Location = new System.Drawing.Point(11, 129);
+            this.btn_QLLoaiPhong.Name = "btn_QLLoaiPhong";
+            this.btn_QLLoaiPhong.Size = new System.Drawing.Size(169, 37);
+            this.btn_QLLoaiPhong.TabIndex = 3;
+            this.btn_QLLoaiPhong.Text = "      Quản lí Loại Phòng";
+            this.btn_QLLoaiPhong.UseVisualStyleBackColor = true;
+            this.btn_QLLoaiPhong.Click += new System.EventHandler(this.btn_QLLoaiPhong_Click);
             // 
             // btn_QLPhong
             // 
@@ -324,7 +325,7 @@
         private Label lb_time;
         private Button btn_QLDV;
         private Button btn_QLSP;
-        private Button button3;
+        private Button btn_QLLoaiPhong;
         private Button btn_QLPhong;
         private Button btn_QLNV;
         private Panel panel_slide;

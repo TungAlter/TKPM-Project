@@ -31,6 +31,9 @@
     <Compile Update="frmPhieuDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmQLDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmQLKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -49,13 +52,22 @@
     <Compile Update="frmThemKH.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmThemPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmThemSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmUpdateDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmUpdateKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmUpdateNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmUpdatePhong.cs">

@@ -148,6 +148,7 @@
             this.btn_search.Size = new System.Drawing.Size(37, 29);
             this.btn_search.TabIndex = 14;
             this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // textBox1
             // 

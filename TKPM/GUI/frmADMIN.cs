@@ -79,9 +79,15 @@ namespace GUI
             OpenChildForm(new frmQLSanPham());
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btn_QLLoaiPhong_Click(object sender, EventArgs e)
         {
+            MovePanel(btn_QLLoaiPhong);
+        }
 
+        private void btn_QLDV_Click(object sender, EventArgs e)
+        {
+            MovePanel(btn_QLDV);
+            OpenChildForm(new frmQLDichVu());
         }
     }
 }

@@ -60,9 +60,8 @@ namespace BUS
 
         public List<NhanVien> SearchNhanVienBLL(string key)
         {
+            if (key == "") return this.Lay_Toan_Bo_NV();
             return nhanvien.SearchNhanVienDAL(key);
         }
     }
-
-}
 }
