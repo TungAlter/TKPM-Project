@@ -12,7 +12,6 @@ namespace DTO
         public string TenNV { get; set; }
         public string CMND { get; set; }
         public string DiaChi { get; set; }
-        public string MaTK { get; set; }
        
     }
 }
