@@ -43,6 +43,7 @@ namespace GUI
         private void btn_QLNV_Click(object sender, EventArgs e)
         {
             MovePanel(btn_QLNV);
+            OpenChildForm(new frmQLNhanVien());
         }
 
         private void frmADMIN_Load(object sender, EventArgs e)

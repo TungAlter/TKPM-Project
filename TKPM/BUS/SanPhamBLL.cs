@@ -21,6 +21,8 @@ namespace BUS
             int total = Int32.Parse(sl) * Int32.Parse(giasp);
             string tongtien = total.ToString();
             string masp = sanpham.Lay_Ma_SP(tensp);
+            int soluongton = sanpham.Lay_So_Luong_Ton(masp);
+            if (Int32.Parse(sl) > soluongton) return 0;
             string res = sanpham.Mua_San_Pham_DAL(maphieu, masp, sl, ngaymua, tongtien);
             if (res == "yes")
             {
@@ -76,6 +78,7 @@ namespace BUS
 
         public List<SanPham> SearchSanPhamBLL(string key)
         {
+            if (key == "") return sanpham.Get_All_SanPham();
             return sanpham.SearchSanPhamDAL(key);
         }
     }

@@ -37,13 +37,33 @@ namespace DAL
             reader.Close();
             return dsSP;
         }
-
-        public string Mua_San_Pham_DAL(string maphieu, string masp, string sl, string ngaymua, string thanhtien)
+        public int Lay_So_Luong_Ton(string masp)
         {
             Connection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "INSERT INTO LICHSUMUASP VALUES (N'" + maphieu + "', N'" + masp + "',N'" + sl + "','" + ngaymua + "',N'" + thanhtien + "')";
+            command.CommandText = "SELECT SoLuongTon FROM SANPHAM WHERE MaSP=N'" + masp + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                int soluong = reader.GetInt32(0);
+                reader.Close();
+                return soluong;
+            }
+            else
+            {
+                reader.Close();
+                return 0;
+            }
+        }
+
+        public string Update_So_Luong_Ton(string masp, string sl)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "UPDATE SANPHAM SET SoLuongTon=" + sl + "WHERE MaSP=N'" + masp + "'";
             command.Connection = connect;
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
@@ -56,6 +76,34 @@ namespace DAL
                 reader.Close();
                 return "yes";
             }
+        }
+        public string Mua_San_Pham_DAL(string maphieu, string masp, string sl_mua, string ngaymua, string thanhtien)
+        {
+            int sl_con_lai = this.Lay_So_Luong_Ton(masp) - Int32.Parse(sl_mua);
+            string res = this.Update_So_Luong_Ton(masp, sl_con_lai.ToString());
+            if (res == "yes")
+            {
+                Connection();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = "INSERT INTO LICHSUMUASP VALUES (N'" + maphieu + "', N'" + masp + "',N'" + sl_mua + "','" + ngaymua + "',N'" + thanhtien + "')";
+                command.Connection = connect;
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    reader.Close();
+                    return "no";
+                }
+                else
+                {
+                    reader.Close();
+                    return "yes";
+                }
+            } else
+            {
+                return "no";
+            }
+
         }
 
         public string Lay_Ma_SP(string tensp)

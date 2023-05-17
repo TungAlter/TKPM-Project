@@ -35,6 +35,7 @@ namespace GUI
             {
                 ListViewItem lvi = new ListViewItem(sp.TenSP);
                 lvi.SubItems.Add(sp.GiaSP.ToString());
+                lvi.SubItems.Add(sp.SoLuongTon.ToString());
                 lv_dsSanPham.Items.Add(lvi);
             }
             lv_dsSanPham.EndUpdate();
@@ -67,6 +68,25 @@ namespace GUI
             {
                 MessageBox.Show("Chọn 1 sản phẩm !!");
             }
+        }
+
+        private void btn_SearchSP_Click(object sender, EventArgs e)
+        {
+            string key = txt_searchkey.Text.ToString();
+            SanPhamBLL spbll = new SanPhamBLL();
+            List<SanPham> dsspGUI = null;
+            dsspGUI = spbll.SearchSanPhamBLL(key);
+            lv_dsSanPham.BeginUpdate();
+            lv_dsSanPham.Items.Clear();
+            foreach (SanPham sp in dsspGUI)
+            {
+                ListViewItem lvi = new ListViewItem(sp.TenSP);
+                lvi.SubItems.Add(sp.GiaSP.ToString());
+                lvi.SubItems.Add(sp.SoLuongTon.ToString());
+
+                lv_dsSanPham.Items.Add(lvi);
+            }
+            lv_dsSanPham.EndUpdate();
         }
     }
 }

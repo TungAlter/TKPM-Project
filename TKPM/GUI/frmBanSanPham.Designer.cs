@@ -31,7 +31,8 @@
             this.lv_dsSanPham = new System.Windows.Forms.ListView();
             this.tensp = new System.Windows.Forms.ColumnHeader();
             this.giasp = new System.Windows.Forms.ColumnHeader();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.sl = new System.Windows.Forms.ColumnHeader();
+            this.txt_searchkey = new System.Windows.Forms.TextBox();
             this.btn_SearchSP = new System.Windows.Forms.Button();
             this.btn_ChonSP = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
@@ -44,7 +45,8 @@
             // 
             this.lv_dsSanPham.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.tensp,
-            this.giasp});
+            this.giasp,
+            this.sl});
             this.lv_dsSanPham.FullRowSelect = true;
             this.lv_dsSanPham.GridLines = true;
             this.lv_dsSanPham.Location = new System.Drawing.Point(7, 50);
@@ -57,20 +59,26 @@
             // tensp
             // 
             this.tensp.Text = "Tên Sản Phẩm";
-            this.tensp.Width = 180;
+            this.tensp.Width = 120;
             // 
             // giasp
             // 
             this.giasp.Text = "Giá";
             this.giasp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.giasp.Width = 150;
+            this.giasp.Width = 110;
             // 
-            // textBox1
+            // sl
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 23);
-            this.textBox1.TabIndex = 1;
+            this.sl.Text = "Số Lượng Còn";
+            this.sl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.sl.Width = 100;
+            // 
+            // txt_searchkey
+            // 
+            this.txt_searchkey.Location = new System.Drawing.Point(12, 11);
+            this.txt_searchkey.Name = "txt_searchkey";
+            this.txt_searchkey.Size = new System.Drawing.Size(245, 23);
+            this.txt_searchkey.TabIndex = 1;
             // 
             // btn_SearchSP
             // 
@@ -80,6 +88,7 @@
             this.btn_SearchSP.TabIndex = 2;
             this.btn_SearchSP.Text = "Tìm kiếm";
             this.btn_SearchSP.UseVisualStyleBackColor = true;
+            this.btn_SearchSP.Click += new System.EventHandler(this.btn_SearchSP_Click);
             // 
             // btn_ChonSP
             // 
@@ -132,7 +141,7 @@
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_ChonSP);
             this.Controls.Add(this.btn_SearchSP);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_searchkey);
             this.Controls.Add(this.lv_dsSanPham);
             this.Name = "frmBanSanPham";
             this.Text = "Bán sản phẩm";
@@ -148,11 +157,12 @@
         private ListView lv_dsSanPham;
         private ColumnHeader tensp;
         private ColumnHeader giasp;
-        private TextBox textBox1;
+        private TextBox txt_searchkey;
         private Button btn_SearchSP;
         private Button btn_ChonSP;
         private Button btn_Exit;
         private NumericUpDown SoLuong;
         private Label label1;
+        private ColumnHeader sl;
     }
 }
