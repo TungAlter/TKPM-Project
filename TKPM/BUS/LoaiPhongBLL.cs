@@ -14,7 +14,9 @@ namespace BUS
         LoaiPhongAccessDAL loaiphong = new LoaiPhongAccessDAL();
         public List<LoaiPhong> Lay_Toan_Bo_LP()
         {
+
             return loaiphong.Get_All_LoaiPhong();
+
         }
 
         public int XoaLoaiPhongBLL(string key)
@@ -61,6 +63,10 @@ namespace BUS
 
         public List<LoaiPhong> SearchLoaiPhongBLL(string key)
         {
+            if(key == "")
+            {
+                return loaiphong.Get_All_LoaiPhong();
+            }
             return loaiphong.SearchLoaiPhongDAL(key);
         }
 

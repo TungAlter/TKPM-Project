@@ -37,6 +37,9 @@
     <Compile Update="frmQLKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmQLLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmQLNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +58,9 @@
     <Compile Update="frmThemKH.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmThemLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmThemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmUpdateKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmUpdateLoaiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmUpdateNhanVien.cs">

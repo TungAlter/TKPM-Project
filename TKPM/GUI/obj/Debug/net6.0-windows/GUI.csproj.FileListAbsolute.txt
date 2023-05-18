@@ -93,3 +93,6 @@ E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmUpdateNhanVien.resource
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmQLDichVu.resources
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmUpdateDichVu.resources
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmThemDichVu.resources
+E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmQLLoaiPhong.resources
+E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmThemLoaiPhong.resources
+E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmUpdateLoaiPhong.resources

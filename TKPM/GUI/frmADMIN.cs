@@ -82,6 +82,7 @@ namespace GUI
         private void btn_QLLoaiPhong_Click(object sender, EventArgs e)
         {
             MovePanel(btn_QLLoaiPhong);
+            OpenChildForm(new frmQLLoaiPhong());
         }
 
         private void btn_QLDV_Click(object sender, EventArgs e)

@@ -104,10 +104,18 @@ namespace DAL
 
         public string ThemLoaiPhongDAL(LoaiPhong lp)
         {
+            string hotrodv = "";
+            if(lp.HoTroDV == true)
+            {
+                hotrodv = "1";
+            } else
+            {
+                hotrodv = "0";
+            }
             Connection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "INSERT INTO LOAIPHONG VALUES (N'" + lp.MaLoaiPhong + "', N'" + lp.TenLoaiPhong + "'," + lp.SoLuong + "," + lp.HoTroDV + ")";
+            command.CommandText = "INSERT INTO LOAIPHONG VALUES (N'" + lp.MaLoaiPhong + "', N'" + lp.TenLoaiPhong + "'," + lp.SoLuong + "," + hotrodv + ")";
             command.Connection = connect;
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
@@ -124,10 +132,19 @@ namespace DAL
 
         public string UpdateLoaiPhongDAL(LoaiPhong lp)
         {
+            string hotrodv = "";
+            if (lp.HoTroDV == true)
+            {
+                hotrodv = "1";
+            }
+            else
+            {
+                hotrodv = "0";
+            }
             Connection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "UPDATE LOAIPHONG SET TenLoaiPhong=N'" + lp.TenLoaiPhong + "',SoLuong= " + lp.SoLuong + ",HoTroDV=" + lp.HoTroDV + " WHERE MaLoaiPhong=N'" + lp.MaLoaiPhong + "'";
+            command.CommandText = "UPDATE LOAIPHONG SET TenLoaiPhong=N'" + lp.TenLoaiPhong + "',SoLuong= " + lp.SoLuong + ",HoTroDV=" + hotrodv + " WHERE MaLoaiPhong=N'" + lp.MaLoaiPhong + "'";
             command.Connection = connect;
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
