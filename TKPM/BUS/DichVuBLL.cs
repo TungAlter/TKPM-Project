@@ -17,9 +17,14 @@ namespace BUS
 
         public int Mua_Dich_Vu_BLL(string maphieu, string tendv, string ngaymua, string giasp)
         {
+            int hotrodv = dichvu.Kiem_Tra_Ho_Tro_DV(maphieu);
             int total = Int32.Parse(giasp);
             string tongtien = total.ToString();
             string madv = dichvu.Lay_Ma_DV(tendv);
+            if (hotrodv == 1)
+            {
+                tongtien = "0";
+            }
             string res = dichvu.Mua_Dich_Vu_DAL(maphieu, madv, ngaymua, tongtien);
             if (res == "yes")
             {

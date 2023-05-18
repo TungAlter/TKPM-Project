@@ -42,6 +42,7 @@ namespace DAL
 
             return res;
         }
+
         public List<HoaDon> Get_All_HoaDon()
         {
             Connection();
@@ -75,7 +76,7 @@ namespace DAL
         public string Them_Hoa_Don_DAL(HoaDon hd)
         {
             int total = 0;
-            List<ChiTietHoaDon> cthd = Chi_Tiet_Mua_SP(hd.MaPhieu);
+            List<ChiTietHoaDon> cthd = Chi_Tiet_Mua_SP_DV(hd.MaPhieu);
             foreach(ChiTietHoaDon ct in cthd)
             {
                 total += Int32.Parse(ct.thanhtien);
@@ -116,7 +117,7 @@ namespace DAL
             return tenkh; 
         }
 
-        public List<ChiTietHoaDon> Chi_Tiet_Mua_SP(string maphieu)
+        public List<ChiTietHoaDon> Chi_Tiet_Mua_SP_DV(string maphieu)
         {
             Connection();
             SqlCommand command1 = new SqlCommand();

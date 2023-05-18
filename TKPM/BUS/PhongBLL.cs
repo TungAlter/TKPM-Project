@@ -31,11 +31,14 @@ namespace BUS
             return Room.UpdateTrangThaiPhong(maph, trangthai);
         }
 
-        public int XoaPhongBLL(string key)
+        public int XoaPhongBLL(string maphong)
         {
-            string res = Room.XoaPhongDAL(key);
+            LoaiPhongAccessDAL lpdal = new LoaiPhongAccessDAL();
+            string res = Room.XoaPhongDAL(maphong);
             if (res == "yes")
             {
+                string maloaiphong = Room.Lay_Ma_Loai_Phong(maphong);
+                lpdal.UpdateSoLuongDAL(maloaiphong);
                 return 1;
             }
             else if (res == "no")
@@ -45,15 +48,17 @@ namespace BUS
             return 0;
         }
 
-        public int ThemPhongBLL(Phong temp)
+        public int ThemPhongBLL(Phong phong)
         {
+            LoaiPhongAccessDAL lpdal = new LoaiPhongAccessDAL();
             LoaiPhongBLL lpbll = new LoaiPhongBLL();
-            string maloai = lpbll.LayMaLoaiPhongBLL(temp.LoaiPhong);
-            temp.LoaiPhong = maloai;
-            temp.TinhTrang = "Đã dọn";
-            string res = Room.ThemPhongDAL(temp);
+            string maloai = lpbll.LayMaLoaiPhongBLL(phong.LoaiPhong);
+            phong.LoaiPhong = maloai;
+            phong.TinhTrang = "Đã dọn";
+            string res = Room.ThemPhongDAL(phong);
             if (res == "yes")
             {
+                lpdal.UpdateSoLuongDAL(phong.LoaiPhong);
                 return 1;
             }
             else if (res == "no")

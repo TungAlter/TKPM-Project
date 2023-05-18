@@ -82,12 +82,12 @@ namespace DAL
             }
         }
 
-        public string Lay_Ten_Phong(string key)
+        public string Lay_Ten_Phong(string maphong)
         {
             Connection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "select TenPhong from PHONG where MaPhong=N'" + key + "'";
+            command.CommandText = "select TenPhong from PHONG where MaPhong=N'" + maphong + "'";
             command.Connection = connect;
             SqlDataReader reader = command.ExecuteReader();
             string tenph = "";
@@ -97,6 +97,23 @@ namespace DAL
             }
             reader.Close();
             return tenph;
+        }
+
+        public string Lay_Ma_Loai_Phong(string maphong)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select LoaiPhong from PHONG where MaPhong=N'" + maphong + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            string maloai = "";
+            while (reader.Read())
+            {
+                maloai = reader.GetString(0);
+            }
+            reader.Close();
+            return maloai;
         }
 
         public string XoaPhongDAL(string key)

@@ -43,6 +43,7 @@ namespace GUI
             if (res == 1)
             {
                 MessageBox.Show("Chỉnh sửa Thành Công !!");
+                this.Close();
             }
             else if (res == 0)
             {

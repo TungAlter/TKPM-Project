@@ -159,6 +159,25 @@ namespace DAL
             }
         }
 
+        public void UpdateSoLuongDAL(string maloai)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select count(*) from PHONG where LoaiPhong=N'" + maloai + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            int sl = 0;
+            while (reader.Read())
+            {
+                sl = reader.GetInt32(0);
+            }
+            reader.Close();
+            command.CommandText = "Update LOAIPHONG set SoLuong =" +sl.ToString() + "where MaLoaiPhong=N'" + maloai + "'";
+            command.Connection = connect;
+            reader = command.ExecuteReader();
+            reader.Close();
+        }
         public List<LoaiPhong> SearchLoaiPhongDAL(string key)
         {
             Connection();

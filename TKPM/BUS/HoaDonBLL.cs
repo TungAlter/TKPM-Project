@@ -17,7 +17,7 @@ namespace BUS
         }
         public List<ChiTietHoaDon> Lay_DS_ChiTietHD(string maphieu)
         {
-            return hoadon.Chi_Tiet_Mua_SP(maphieu);
+            return hoadon.Chi_Tiet_Mua_SP_DV(maphieu);
         }
         public string ThemHoaDon(HoaDon hd)
         {

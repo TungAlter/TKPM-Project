@@ -36,6 +36,30 @@ namespace DAL
             return dsDV;
         }
 
+        public int Kiem_Tra_Ho_Tro_DV(string maphieu)
+        {
+            bool check = true;
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select HoTroDV from PHIEUTHUEPHONG pt join PHONG ph on pt.MaPhongThue=ph.MaPhong join LOAIPHONG lp on ph.LoaiPhong =lp.MaLoaiPhong where pt.MaPhieuThue=N'" + maphieu + "'";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                check = reader.GetBoolean(0);
+            }
+            reader.Close();
+            if (check == true)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
         public string Mua_Dich_Vu_DAL(string maphieu, string madv, string ngaymua, string thanhtien)
         {
             Connection();

@@ -96,7 +96,7 @@ namespace GUI
             }
             else
             {
-                MessageBox.Show("Chọn 1 đối tượng để xóa !!");
+                MessageBox.Show("Chọn 1 đối tượng để Chỉnh sửa !!");
             }
         }
 
