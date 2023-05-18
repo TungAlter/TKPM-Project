@@ -49,6 +49,9 @@
     <Compile Update="frmQLTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmThemDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmThemKH.cs">
       <SubType>Form</SubType>
     </Compile>

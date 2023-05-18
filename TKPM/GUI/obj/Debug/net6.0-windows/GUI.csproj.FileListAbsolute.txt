@@ -92,3 +92,4 @@ E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmThemNhanVien.resources
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmUpdateNhanVien.resources
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmQLDichVu.resources
 E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmUpdateDichVu.resources
+E:\TKPM-Project\TKPM\GUI\obj\Debug\net6.0-windows\GUI.frmThemDichVu.resources

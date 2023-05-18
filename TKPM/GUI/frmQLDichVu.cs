@@ -65,7 +65,8 @@ namespace GUI
 
         private void btn_addDV_Click(object sender, EventArgs e)
         {
-
+            frmThemDichVu frmThemDichVu = new frmThemDichVu(); 
+            frmThemDichVu.ShowDialog();
         }
 
         private void btn_updateDV_Click(object sender, EventArgs e)
@@ -89,6 +90,21 @@ namespace GUI
 
         private void frmQLDichVu_Load(object sender, EventArgs e)
         {
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            DichVuBLL dvbll = new DichVuBLL();
+            string key = textBox1.Text.ToString();
+            List<DichVu> dsdv = dvbll.SearchDichVuBLL(key);
+            lv_dsDichVu.Items.Clear();
+            foreach (DichVu dv in dsdv)
+            {
+                ListViewItem lvi = new ListViewItem(dv.MaDV);
+                lvi.SubItems.Add(dv.TenDV);
+                lvi.SubItems.Add(dv.GiaDV.ToString());
+                lv_dsDichVu.Items.Add(lvi);
+            }
         }
     }
 }
