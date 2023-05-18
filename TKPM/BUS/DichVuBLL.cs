@@ -15,6 +15,11 @@ namespace BUS
             return dichvu.Get_All_DichVu();
         }
 
+        public List<DichVu> Dich_Vu_Kha_Dung(string maphieu)
+        {
+            return dichvu.DS_Dich_Vu_Kha_Dung(maphieu);
+        }
+
         public int Mua_Dich_Vu_BLL(string maphieu, string tendv, string ngaymua, string giasp)
         {
             int hotrodv = dichvu.Kiem_Tra_Ho_Tro_DV(maphieu);

@@ -6,12 +6,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DAL
 {
     public class DichVuAccessDAL : DataAccessDAL
     {
         public List<DichVu> dsDV = new List<DichVu>();
+        public List<DichVu> DV = new List<DichVu>();
 
         public List<DichVu> Get_All_DichVu()
         {
@@ -161,6 +163,28 @@ namespace DAL
             }
         }
 
+        public List<DichVu> DS_Dich_Vu_Kha_Dung(string maphieu)
+        {
+            Connection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select* from DICHVU dv1 where dv1.MaDV not in (select dv.MaDV from DANGKYDV dk join DICHVU dv on dk.MaDichVu = dv.MaDV where dk.MaPhieuPhong=N'"+ maphieu+"')";
+            command.Connection = connect;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string masp = reader.GetString(0);
+                string tensp = reader.GetString(1);
+                int giasp = reader.GetInt32(2);
+                DichVu dv = new DichVu();
+                dv.MaDV = masp;
+                dv.TenDV = tensp;
+                dv.GiaDV = giasp;
+                DV.Add(dv);
+            }
+            reader.Close();
+            return DV;
+        }
         public List<DichVu> SearchDichVuDAL(string key)
         {
             Connection();

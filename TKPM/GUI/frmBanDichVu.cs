@@ -56,7 +56,7 @@ namespace GUI
         {
             DichVuBLL dvbll = new DichVuBLL();
             List<DichVu> dsdvGUI = null;
-            dsdvGUI = dvbll.Lay_Toan_Bo_DV();
+            dsdvGUI = dvbll.Dich_Vu_Kha_Dung(frmDatPhong.maphieu);
             lv_dsDichVu.BeginUpdate();
             lv_dsDichVu.Items.Clear();
             foreach (DichVu dv in dsdvGUI)
