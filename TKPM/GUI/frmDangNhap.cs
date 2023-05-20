@@ -8,6 +8,7 @@ namespace GUI
         public frmDangNhap()
         {
             InitializeComponent();
+            txt_matkhau.PasswordChar = '*';
         }
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
